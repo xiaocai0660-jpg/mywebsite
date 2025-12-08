@@ -1,43 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About Us</title>
-<link rel="icon" type="image/png" href="favicon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | BR Jalan Securities</title>
+    <link rel="icon" type="image/png" href="02.png">
+    <style>
+        *{box-sizing:border-box;margin:0;padding:0;}
+        body{font-family:Arial,Helvetica,sans-serif;background:#f3f5fb;color:#222;}
+        a{text-decoration:none;color:inherit;}
 
-<style>
-body{
-    font-family:Arial;
-    margin:0;
-    background:white;
-}
+        header{
+            background:#002060;
+            color:#fff;
+            padding:18px 60px;
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+        }
+        .logo{font-size:22px;font-weight:bold;}
+        nav a{color:#fff;margin-left:26px;font-size:15px;font-weight:bold;}
+        nav a:hover{opacity:.8;}
 
-header{
-    background:#001e5c;
-    padding:25px 60px;
-    color:white;
-}
+        .wrapper{
+            max-width:900px;
+            margin:40px auto 60px;
+            padding:0 20px;
+        }
+        h1{
+            font-size:30px;
+            color:#002060;
+            margin-bottom:16px;
+        }
+        h2{
+            font-size:20px;
+            color:#002060;
+            margin:26px 0 8px;
+        }
+        p{line-height:1.7;font-size:15px;margin-bottom:8px;}
+        ul{margin-left:18px;margin-bottom:8px;}
+        li{line-height:1.6;font-size:15px;margin-bottom:4px;}
 
-header nav a{
-    color:white;
-    margin-right:25px;
-    text-decoration:none;
-}
+        .box{
+            background:#fff;
+            border-radius:8px;
+            padding:26px 24px;
+            box-shadow:0 4px 15px rgba(0,0,0,.06);
+            margin-bottom:20px;
+        }
 
-.container{
-    width:85%;
-    margin:auto;
-    margin-top:40px;
-    font-size:18px;
-}
-</style>
-
+        footer{
+            background:#001433;
+            color:#d8def5;
+            padding:18px 20px;
+            font-size:12px;
+            text-align:center;
+        }
+        @media(max-width:768px){
+            header{flex-direction:column;align-items:flex-start;padding:14px 20px;}
+            nav{margin-top:8px;}
+            nav a{margin-left:14px;}
+        }
+    </style>
 </head>
-
 <body>
 
 <header>
+    <div class="logo">BR Jalan Securities</div>
     <nav>
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
@@ -47,12 +76,52 @@ header nav a{
     </nav>
 </header>
 
-<div class="container">
-    <h2>Who We Are</h2>
-    <p>
-        BR Jalan Securities offers advisory services, execution support and research-based market strategies.
-    </p>
+<div class="wrapper">
+
+    <div class="box">
+        <h1>About BR Jalan Securities</h1>
+        <p>
+            BR Jalan Securities Pvt Ltd is a SEBI-registered intermediary providing broking and
+            depository services to Indian investors. Since inception, our focus has been to combine
+            market experience with disciplined processes and transparent communication.
+        </p>
+    </div>
+
+    <div class="box">
+        <h2>Our Mission</h2>
+        <p>
+            To help investors protect and grow their wealth through research-backed ideas,
+            risk-managed execution and long-term relationships built on trust.
+        </p>
+
+        <h2>Our Approach</h2>
+        <ul>
+            <li><strong>Research driven:</strong> Ideas start from data and fundamentals, not rumours.</li>
+            <li><strong>Process oriented:</strong> Clear rules for entries, exits and position sizing.</li>
+            <li><strong>Risk aware:</strong> Focus on capital preservation before return maximisation.</li>
+            <li><strong>Compliance focused:</strong> Operations aligned with SEBI and exchange norms.</li>
+        </ul>
+    </div>
+
+    <div class="box">
+        <h2>Regulatory Details</h2>
+        <p>
+            BR Jalan Securities Pvt Ltd<br>
+            CIN: U67120MH1997PTC108736<br>
+            SEBI Registration No. INB/INF INZ000199136<br>
+            Member: BSE, NSE, MCX, CDSL
+        </p>
+        <p>
+            Investors are encouraged to review the risk disclosure documents, rights and obligations,
+            and policies available with the company before investing.
+        </p>
+    </div>
+
 </div>
+
+<footer>
+    Investment in securities market is subject to market risks. Please read all related documents carefully before investing.
+</footer>
 
 </body>
 </html>
