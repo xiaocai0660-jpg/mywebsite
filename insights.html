@@ -1,75 +1,463 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Market Insights | B R Jalan Securities</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home | B R Jalan Securities</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="top-bar">
-    <div class="container top-bar-inner">
-      <span>KYC is one-time before registration in securities markets</span>
-      <span>SEBI Reg. No: INZ000199136 | Phone: +91 9601271770</span>
-    </div>
+
+  <!-- Top notice bar -->
+  <div class="top-strip">
+    To display investor complaints and regulatory updates please refer to the
+    official circulars and investor education material issued by SEBI and exchanges
   </div>
 
+  <!-- Header with logo and contact -->
   <header class="site-header">
-    <div class="container nav-inner">
-      <a href="index.html" class="logo">
-        <span class="logo-mark">BR</span>
-        <span class="logo-text">
-          <strong>B R Jalan Securities</strong>
-          <small>Initiate · Invest · Prosper</small>
-        </span>
-      </a>
-      <nav class="main-nav">
-        <a href="index.html">Home</a>
-        <a href="plan.html">10th Plan</a>
-        <a href="investment.html">Investment Solutions</a>
-        <a href="about.html">About Us</a>
-        <a href="insights.html" class="active">Market Insights</a>
-        <a href="portal.html">Investor Portal</a>
-        <a href="contact.html">Get In Touch</a>
-      </nav>
+    <div class="header-inner">
+      <div class="logo-block">
+        <div class="logo-mark">BR</div>
+        <div class="logo-text">
+          <div class="logo-title">B R Jalan Securities</div>
+          <div class="logo-tagline">Initiate Invest Prosper</div>
+        </div>
+      </div>
+
+      <div class="header-contact">
+        <div class="contact-item">
+          <span class="contact-label">Call us</span>
+          <span class="contact-value">+91 9601271770</span>
+        </div>
+        <div class="contact-item">
+          <span class="contact-label">SEBI Registration</span>
+          <span class="contact-value">INZ000199136</span>
+        </div>
+        <a href="contact.html" class="btn-outline">Contact Us</a>
+      </div>
     </div>
   </header>
 
-  <main class="main-content">
-    <section class="page-hero small">
-      <div class="container">
-        <h1>Market Insights</h1>
-        <p>Research notes, market views, and strategy updates</p>
-      </div>
-    </section>
+  <!-- Main navigation -->
+  <nav class="main-nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo-small">BR Jalan</a>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="plan.html">10th Collective Investment Scheme</a></li>
+        <li><a href="investment.html">Investment Solutions</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="#insights">Market Insights</a></li>
+        <li><a href="#portal">Investor Portal</a></li>
+        <li><a href="contact.html">Get In Touch</a></li>
+      </ul>
+    </div>
+  </nav>
 
-    <section class="section">
-      <div class="container card-grid">
-        <article class="card">
-          <h3>Quarterly Market Outlook</h3>
-          <p>Macro view on interest rates, inflation, and sector rotation for the coming quarter.</p>
-          <span class="tag">Strategy</span>
+  <!-- Hero slider -->
+  <section class="hero-slider">
+    <div class="hero-slide active"
+         style="background-image: url('02.png');">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <p class="hero-kicker">Towards a brighter financial future</p>
+        <h1 class="hero-title">
+          Start investing now to achieve your financial goals
+        </h1>
+        <p class="hero-subtitle">
+          Use disciplined equity trading and structured strategies to protect
+          capital from inflation and grow long term wealth
+        </p>
+        <div class="hero-actions">
+          <a href="plan.html" class="btn-primary">Join the 10th Plan</a>
+          <a href="investment.html" class="btn-secondary">View Solutions</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-slide"
+         style="background-image: url('02.png');">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <p class="hero-kicker">AI-assisted trading discipline</p>
+        <h1 class="hero-title">
+          Combine intraday AI rotation with bulk-deal opportunities
+        </h1>
+        <p class="hero-subtitle">
+          Structured execution on NSE and BSE with clear rules and transparent reporting
+        </p>
+        <div class="hero-actions">
+          <a href="plan.html" class="btn-primary">Explore Plan Structure</a>
+          <a href="#insights" class="btn-secondary">Market Insights</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-slide"
+         style="background-image: url('02.png');">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <p class="hero-kicker">Investor-first risk control</p>
+        <h1 class="hero-title">
+          Protect capital while aiming for multi-fold growth
+        </h1>
+        <p class="hero-subtitle">
+          Nodal account settlement, segregated funds and clear exit rules for every trade
+        </p>
+        <div class="hero-actions">
+          <a href="#portal" class="btn-primary">Open Investor Portal</a>
+          <a href="contact.html" class="btn-secondary">Talk to our team</a>
+        </div>
+      </div>
+    </div>
+
+    <button class="hero-arrow hero-arrow-left" aria-label="Previous slide">
+      &#10094;
+    </button>
+    <button class="hero-arrow hero-arrow-right" aria-label="Next slide">
+      &#10095;
+    </button>
+
+    <div class="hero-dots"></div>
+  </section>
+
+  <!-- Welcome / company intro -->
+  <section class="section section-light">
+    <div class="container two-column">
+      <div class="column">
+        <h2>Welcome to B R Jalan Securities</h2>
+        <p>
+          B R Jalan Securities is an investment and broking firm focused on
+          helping clients with trading, analytics and advisory services across
+          Indian markets
+        </p>
+        <p>
+          The team has been active in the equity and derivatives space for
+          more than three decades and serves investors ranging from first-time
+          traders to long-term high-net-worth clients
+        </p>
+        <a href="about.html" class="btn-primary">Read more</a>
+      </div>
+      <div class="column">
+        <div class="image-card">
+          <!-- you can replace 02.png with another banner later -->
+          <img src="02.png" alt="Market analytics" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10th Collective Investment Plan highlight -->
+  <section class="section section-emphasis">
+    <div class="container">
+      <div class="section-header">
+        <h2>The 10th Collective Investment Scheme</h2>
+        <p>
+          A structured strategy combining AI intraday rotation, bulk-deal
+          arbitrage and offline IPO allocations with clear tiers and defined
+          risk controls
+        </p>
+      </div>
+
+      <div class="plan-grid">
+        <div class="plan-card">
+          <h3>AI Intraday Rotation</h3>
+          <p>
+            Short-term positions based on AI-driven signals, strict stop-loss
+            and same-day settlement
+          </p>
+          <ul>
+            <li>Entry from 10,000 capital</li>
+            <li>Target 35 percent plus per month</li>
+            <li>Daily risk and exposure limits</li>
+          </ul>
+        </div>
+
+        <div class="plan-card plan-card-highlight">
+          <h3>Bulk Deal Arbitrage</h3>
+          <p>
+            Participate in negotiated institutional blocks with predefined
+            discounts and exit targets
+          </p>
+          <ul>
+            <li>Preferred slab 3,00,000 to 5,00,000</li>
+            <li>Institutional-level discount windows</li>
+            <li>Expected 3 to 5 times cycle within 4 months</li>
+          </ul>
+        </div>
+
+        <div class="plan-card">
+          <h3>IPO & Private Equity</h3>
+          <p>
+            Offline allocations in selected IPOs and pre-IPO equity as per
+            eligibility and risk profile
+          </p>
+          <ul>
+            <li>Allocation through regulated channels</li>
+            <li>Linked with nodal account settlement</li>
+            <li>Bonus and dividend participation</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="section-cta">
+        <a href="plan.html" class="btn-primary">View full plan document</a>
+        <a href="contact.html" class="btn-secondary">Schedule a call</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products & Services -->
+  <section class="section section-light" id="solutions">
+    <div class="container">
+      <div class="section-header">
+        <h2>Investment Solutions</h2>
+        <p>
+          Multiple strategies under one umbrella to match different capital
+          sizes and risk appetites
+        </p>
+      </div>
+
+      <div class="cards-grid">
+        <article class="info-card">
+          <h3>AI Smart Short-Term</h3>
+          <p>
+            Machine-assisted intraday and swing trading with defined rules and
+            strict risk control
+          </p>
         </article>
-        <article class="card">
-          <h3>Understanding Bulk Deals</h3>
-          <p>How discounted institutional deals work and why preparation matters for allocation.</p>
-          <span class="tag">Education</span>
+
+        <article class="info-card">
+          <h3>Block-Trade Strategy</h3>
+          <p>
+            Structured participation in discount block trades with clear entry,
+            target and exit
+          </p>
         </article>
-        <article class="card">
-          <h3>AI in Trading – What It Really Does</h3>
-          <p>Separating hype from reality in AI-based systems and how we use them in the 10th Plan.</p>
-          <span class="tag">Technology</span>
+
+        <article class="info-card">
+          <h3>Priority Allotment</h3>
+          <p>
+            Offline IPO and pre-IPO allocations for qualified clients with
+            long-term growth focus
+          </p>
+        </article>
+
+        <article class="info-card">
+          <h3>Wealth Compounding</h3>
+          <p>
+            Medium-term positional strategies to compound capital through
+            quality businesses
+          </p>
         </article>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
+  <!-- Market Insights -->
+  <section class="section" id="insights">
+    <div class="container">
+      <div class="section-header">
+        <h2>Market Insights</h2>
+        <p>
+          Short notes and viewpoints that help investors understand market
+          structure and current themes
+        </p>
+      </div>
+
+      <div class="insights-grid">
+        <article class="insight-card">
+          <h3>Nifty & Bank Nifty Trend</h3>
+          <p>
+            Daily and weekly levels tracked with focus on big-picture
+            direction and volatility zones
+          </p>
+        </article>
+        <article class="insight-card">
+          <h3>Sector Rotation</h3>
+          <p>
+            How AI signals rotate between sectors such as banking, IT, auto
+            and capital goods
+          </p>
+        </article>
+        <article class="insight-card">
+          <h3>Bulk Deal Window</h3>
+          <p>
+            Commentary on upcoming block opportunities and institutional
+            flows in selected names
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Investor portal highlight -->
+  <section class="section section-emphasis" id="portal">
+    <div class="container two-column middle">
+      <div class="column">
+        <h2>Investor Portal</h2>
+        <p>
+          A simple web interface where clients can review statements, plan
+          status, trade summaries and allocation details
+        </p>
+        <ul class="bullet-list">
+          <li>View portfolio and realised profit snapshots</li>
+          <li>Download periodic reports and tax summaries</li>
+          <li>Track 10th Plan allocation and exits</li>
+        </ul>
+        <a href="contact.html" class="btn-primary">
+          Request portal access
+        </a>
+      </div>
+      <div class="column">
+        <div class="portal-card">
+          <h3>Login Panel (Sample)</h3>
+          <p>Client ID</p>
+          <input type="text" placeholder="Enter Client ID" />
+          <p>Password</p>
+          <input type="password" placeholder="Enter Password" />
+          <button class="btn-primary btn-full" type="button">Login</button>
+          <p class="portal-note">
+            For live credentials please contact the B R Jalan team directly
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why choose us -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="section-header section-header-center">
+        <h2>Why choose B R Jalan Securities</h2>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-item">
+          <div class="feature-icon">₹</div>
+          <h3>Excellent Support</h3>
+          <p>Dedicated desk for trade execution and query handling</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">👥</div>
+          <h3>Trustworthy</h3>
+          <p>Regulated entity with transparent reporting to clients</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">➕</div>
+          <h3>Value Addition</h3>
+          <p>Research, education and hand-holding for serious investors</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">⚙</div>
+          <h3>Work Approach</h3>
+          <p>Rule-based systems instead of emotion-driven decisions</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section section-light">
+    <div class="container">
+      <div class="section-header section-header-center">
+        <h2>What Our Clients Say</h2>
+      </div>
+
+      <div class="testimonials-grid">
+        <article class="testimonial-card">
+          <p>
+            I am very happy to be associated with B R Jalan Securities Their
+            team has strong market experience and manages our portfolio with
+            discipline
+          </p>
+          <div class="testimonial-name">Shantu A</div>
+        </article>
+
+        <article class="testimonial-card">
+          <p>
+            We have been working with the team for more than a decade and have
+            seen consistent support both in markets and in planning
+          </p>
+          <div class="testimonial-name">Kantilal K</div>
+        </article>
+
+        <article class="testimonial-card">
+          <p>
+            The biggest comfort is that risk is clearly explained before any
+            strategy and exits are planned in advance
+          </p>
+          <div class="testimonial-name">Umang A</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact strip -->
+  <section class="section section-contact">
+    <div class="container">
+      <div class="contact-strip">
+        <div>
+          <h2>Connect With Us</h2>
+          <p>
+            Share your details and our team will reach out to understand your
+            investment goals
+          </p>
+        </div>
+        <form class="contact-form">
+          <input type="text" placeholder="Your Name" />
+          <input type="email" placeholder="Email Address" />
+          <input type="text" placeholder="Phone" />
+          <input type="text" placeholder="Subject" />
+          <textarea rows="3" placeholder="Message"></textarea>
+          <button type="button" class="btn-primary btn-full">
+            Submit
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer class="site-footer">
-    <div class="container footer-inner">
-      <div><strong>B R Jalan Securities Pvt. Ltd.</strong></div>
-      <div>Phone: +91 9601271770</div>
-      <div class="footer-copy">© 2025 B R Jalan Securities. All rights reserved.</div>
+    <div class="container footer-grid">
+      <div>
+        <h3>B R Jalan Securities Pvt Ltd</h3>
+        <p>
+          CIN U67120MH1997PTC108736<br />
+          SEBI Registration No INZ000199136<br />
+          Member NSE BSE MCX and CDSL
+        </p>
+      </div>
+
+      <div>
+        <h4>Address</h4>
+        <p>
+          903 Marathon Icon Marathon Nextgen Campus<br />
+          Veer Santaji Lane G R Kadam Marg<br />
+          Lower Parel West Mumbai 400013
+        </p>
+        <p>Phone +91 9601271770</p>
+      </div>
+
+      <div>
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="plan.html">10th Plan</a></li>
+          <li><a href="investment.html">Investment Solutions</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      © B R Jalan Securities Pvt Ltd All rights reserved
     </div>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
