@@ -1,644 +1,170 @@
-/* Global reset */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
+/* ===== Market Insights page ===== */
 
-body {
-  margin: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, sans-serif;
-  line-height: 1.6;
-  color: #1e293b;
-  background-color: #f3f4f6;
-}
-
-/* Simple utility containers */
-.container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 16px;
-}
-
-/* Top strip */
-.top-strip {
-  background: #111827;
-  color: #e5e7eb;
-  font-size: 12px;
-  padding: 6px 16px;
-  text-align: center;
-}
-
-/* Header */
-.site-header {
-  background: #ffffff;
-  border-bottom: 1px solid #e5e7eb;
-}
-
-.header-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 12px 16px;
+/* 小号横幅样式 */
+.hero-small {
+  position: relative;
+  height: 260px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 24px;
-}
-
-.logo-block {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.logo-mark {
-  width: 40px;
-  height: 40px;
-  border-radius: 999px;
-  background: #b68a2a;
   color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
+  background: linear-gradient(135deg, #142544, #1f3660);
 }
 
-.logo-text {
-  display: flex;
-  flex-direction: column;
-}
-
-.logo-title {
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  font-size: 18px;
-}
-
-.logo-tagline {
-  font-size: 12px;
-  color: #6b7280;
-}
-
-.header-contact {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-}
-
-.contact-item {
-  display: flex;
-  flex-direction: column;
-  font-size: 12px;
-}
-
-.contact-label {
-  color: #6b7280;
-}
-
-.contact-value {
-  font-weight: 600;
-}
-
-/* Buttons */
-.btn-primary,
-.btn-secondary,
-.btn-outline {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 20px;
-  border-radius: 999px;
-  border: 1px solid transparent;
-  font-size: 14px;
-  font-weight: 600;
-  cursor: pointer;
-  text-decoration: none;
-  transition: all 0.2s ease;
-  white-space: nowrap;
-}
-
-.btn-primary {
-  background: #b68a2a;
-  color: #ffffff;
-  border-color: #b68a2a;
-}
-
-.btn-primary:hover {
-  background: #946c13;
-  border-color: #946c13;
-}
-
-.btn-secondary {
-  background: transparent;
-  color: #ffffff;
-  border-color: #ffffff;
-}
-
-.btn-secondary:hover {
-  background: #ffffff;
-  color: #111827;
-}
-
-.btn-outline {
-  background: transparent;
-  color: #b68a2a;
-  border-color: #b68a2a;
-}
-
-.btn-outline:hover {
-  background: #b68a2a;
-  color: #ffffff;
-}
-
-.btn-full {
-  width: 100%;
-}
-
-/* Navigation */
-.main-nav {
-  background: #0f172a;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-.nav-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 16px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.nav-logo-small {
-  color: #f9fafb;
-  text-decoration: none;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  padding: 14px 0;
-}
-
-.nav-menu {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.nav-menu a {
-  color: #e5e7eb;
-  text-decoration: none;
-  font-size: 14px;
-  padding: 18px 0;
-  position: relative;
-}
-
-.nav-menu a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 10px;
-  width: 0;
-  height: 2px;
-  background: #facc15;
-  transition: width 0.2s ease;
-}
-
-.nav-menu a:hover::after,
-.nav-menu a.active::after {
-  width: 100%;
-}
-
-/* Hero slider */
-.hero-slider {
-  position: relative;
-  height: 520px;
-  overflow: hidden;
-}
-
-.hero-slide {
-  position: absolute;
-  inset: 0;
+/* 使用和首页相同的背景图风格 你也可以换成别的图片 */
+.hero-insights {
+  background-image: url("02.png");
   background-size: cover;
   background-position: center;
-  opacity: 0;
-  transform: scale(1.02);
-  transition: opacity 0.8s ease, transform 0.8s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.hero-slide.active {
-  opacity: 1;
-  transform: scale(1);
 }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: radial-gradient(
-      circle at top left,
-      rgba(15, 23, 42, 0.8),
-      rgba(15, 23, 42, 0.9)
-    );
+  background: rgba(6, 18, 48, 0.7);
 }
 
 .hero-content {
   position: relative;
   max-width: 900px;
-  padding: 0 16px;
-  color: #f9fafb;
-  text-align: left;
 }
 
 .hero-kicker {
   text-transform: uppercase;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.15em;
   font-size: 12px;
-  margin-bottom: 12px;
-  color: #d1d5db;
+  margin-bottom: 8px;
+  color: #f3c979;
 }
 
-.hero-title {
-  font-size: 42px;
-  line-height: 1.2;
-  margin: 0 0 16px;
+.hero-small h1 {
+  font-size: 36px;
+  margin: 0 0 10px;
+  color: #ffffff;
 }
 
 .hero-subtitle {
   max-width: 640px;
   font-size: 15px;
-  color: #e5e7eb;
-  margin-bottom: 24px;
+  color: #e1e7f5;
 }
 
-.hero-actions {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-}
-
-/* Hero arrows and dots */
-.hero-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(15, 23, 42, 0.7);
-  color: #f9fafb;
-  border: none;
-  width: 36px;
-  height: 36px;
-  border-radius: 999px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.hero-arrow-left {
-  left: 16px;
-}
-
-.hero-arrow-right {
-  right: 16px;
-}
-
-.hero-dots {
-  position: absolute;
-  bottom: 18px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 8px;
-}
-
-.hero-dots button {
-  width: 9px;
-  height: 9px;
-  border-radius: 999px;
-  border: none;
-  background: rgba(249, 250, 251, 0.5);
-  cursor: pointer;
-}
-
-.hero-dots button.active {
-  width: 22px;
-  background: #facc15;
-}
-
-/* Sections */
+/* 区块通用 */
 .section {
   padding: 60px 0;
-  background: #f3f4f6;
 }
 
 .section-light {
-  background: #ffffff;
+  padding: 60px 0;
+  background: #f5f7fb;
 }
 
-.section-dark {
-  background: #020617;
-  color: #e5e7eb;
-}
-
-.section-emphasis {
-  background: linear-gradient(135deg, #0f172a, #020617);
-  color: #f9fafb;
-}
-
-.section-contact {
-  background: #111827;
-  color: #f9fafb;
-}
-
-.section-header {
-  margin-bottom: 32px;
-}
-
-.section-header h2 {
-  font-size: 28px;
-  margin: 0 0 8px;
-}
-
-.section-header p {
-  margin: 0;
-  color: #6b7280;
-}
-
-.section-emphasis .section-header p,
-.section-dark .section-header p,
-.section-contact .section-header p {
-  color: #cbd5f5;
-}
-
-.section-header-center {
-  text-align: center;
-}
-
-/* Two column layout */
-.two-column {
+/* 三列卡片 */
+.insights-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
-  gap: 32px;
-  align-items: flex-start;
-}
-
-.two-column.middle {
-  align-items: center;
-}
-
-.column img {
-  max-width: 100%;
-  border-radius: 12px;
-}
-
-/* Cards */
-.image-card {
-  border-radius: 14px;
-  overflow: hidden;
-  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.25);
-}
-
-.plan-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 24px;
 }
 
-.plan-card {
-  background: rgba(15, 23, 42, 0.9);
-  border-radius: 14px;
-  padding: 20px 18px;
-  border: 1px solid rgba(148, 163, 184, 0.6);
+.insight-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 22px 20px;
+  box-shadow: 0 8px 18px rgba(15, 35, 80, 0.08);
+  border-top: 4px solid #c99a3b;
 }
 
-.plan-card h3 {
+.insight-card h3 {
   margin-top: 0;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
+  font-size: 18px;
+  color: #1b2945;
 }
 
-.plan-card p {
-  font-size: 14px;
-  color: #cbd5f5;
+.insight-label {
+  font-size: 13px;
+  color: #7683a4;
+  margin-bottom: 12px;
 }
 
-.plan-card ul {
+.insight-card ul {
+  margin: 0;
   padding-left: 18px;
   font-size: 14px;
-  color: #e5e7eb;
+  color: #3c4560;
 }
 
-.plan-card-highlight {
-  border-color: #facc15;
-  box-shadow: 0 16px 40px rgba(250, 204, 21, 0.24);
-}
-
-.section-cta {
-  margin-top: 28px;
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-}
-
-/* Generic cards grid */
-.cards-grid,
-.insights-grid,
-.features-grid,
-.testimonials-grid {
+/* 主内容 + 侧边栏布局 */
+.insights-layout {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 24px;
+  grid-template-columns: minmax(0, 2.2fr) minmax(260px, 1fr);
+  gap: 30px;
 }
 
-.info-card,
-.insight-card,
-.testimonial-card {
-  background: #ffffff;
-  border-radius: 14px;
-  padding: 20px 18px;
-  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+@media (max-width: 900px) {
+  .insights-layout {
+    grid-template-columns: 1fr;
+  }
 }
 
-.section-emphasis .info-card,
-.section-dark .info-card {
-  background: rgba(15, 23, 42, 0.88);
-}
-
-.features-grid .feature-item {
-  background: rgba(15, 23, 42, 0.7);
-  border-radius: 14px;
-  padding: 20px 18px;
-  text-align: center;
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.4);
-}
-
-.feature-icon {
-  font-size: 28px;
-  margin-bottom: 8px;
-}
-
-/* Portal card */
-.portal-card {
-  background: #020617;
-  border-radius: 18px;
-  padding: 20px 18px;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
-}
-
-.portal-card h3 {
+.insights-main h2 {
+  font-size: 22px;
   margin-top: 0;
-  margin-bottom: 16px;
-  color: #f9fafb;
+  margin-bottom: 18px;
 }
 
-.portal-card p {
-  margin: 8px 0 4px;
-  font-size: 13px;
-  color: #e5e7eb;
+.note-block {
+  margin-bottom: 22px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #dde3f1;
 }
 
-.portal-card input {
-  width: 100%;
-  padding: 8px 10px;
-  border-radius: 999px;
-  border: 1px solid #4b5563;
-  background: #020617;
-  color: #f9fafb;
-  font-size: 13px;
+.note-block h3 {
+  font-size: 17px;
   margin-bottom: 8px;
+  color: #1b2945;
 }
 
-.portal-note {
-  font-size: 11px;
-  color: #9ca3af;
-}
-
-/* Contact strip */
-.contact-strip {
-  display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.2fr);
-  gap: 26px;
-  align-items: center;
-}
-
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 8px 10px;
-  border-radius: 999px;
-  border: 1px solid #4b5563;
-  background: rgba(15, 23, 42, 0.8);
-  color: #f9fafb;
-  font-size: 13px;
-  margin-bottom: 8px;
-}
-
-.contact-form textarea {
-  border-radius: 16px;
-  resize: vertical;
-}
-
-/* Footer */
-.site-footer {
-  background: #020617;
-  color: #e5e7eb;
-}
-
-.footer-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 24px;
-  padding: 32px 16px 20px;
-}
-
-.footer-links {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.footer-links li {
-  margin-bottom: 4px;
-}
-
-.footer-links a {
-  color: #e5e7eb;
-  text-decoration: none;
+.note-block p {
   font-size: 14px;
+  color: #3a4360;
 }
 
-.footer-links a:hover {
-  text-decoration: underline;
+/* 右侧卡片 */
+.insights-aside {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
 }
 
-.footer-bottom {
-  border-top: 1px solid #111827;
-  padding: 10px 16px 14px;
+.aside-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 18px 16px;
+  box-shadow: 0 6px 14px rgba(10, 24, 60, 0.08);
+  font-size: 14px;
+  color: #3a4360;
+}
+
+.aside-card h4 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #1b2945;
+}
+
+.aside-card ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.contact-highlight {
+  margin: 10px 0 12px;
+  font-weight: 600;
+  color: #1b2945;
+}
+
+.btn-full {
+  display: inline-block;
+  width: 100%;
   text-align: center;
-  font-size: 12px;
-  color: #9ca3af;
-}
-
-/* Responsive */
-@media (max-width: 960px) {
-  .header-inner {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .two-column,
-  .plan-grid,
-  .cards-grid,
-  .insights-grid,
-  .features-grid,
-  .testimonials-grid,
-  .footer-grid,
-  .contact-strip {
-    grid-template-columns: minmax(0, 1fr);
-  }
-
-  .hero-title {
-    font-size: 32px;
-  }
-
-  .hero-slider {
-    height: 460px;
-  }
-
-  .nav-menu {
-    gap: 12px;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-  }
-}
-
-@media (max-width: 640px) {
-  .hero-slider {
-    height: 420px;
-  }
-
-  .nav-inner {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .nav-menu {
-    width: 100%;
-    justify-content: flex-start;
-  }
-
-  .hero-actions {
-    flex-direction: column;
-    align-items: flex-start;
-  }
 }
