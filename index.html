@@ -3,42 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <title>BR Jalan Securities</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            margin: 0;
+            background: #f5f7fa;
+        }
+
+        .nav {
+            background: #001b5c;
+            padding: 15px 60px;
+        }
+
+        .nav a {
+            margin-right: 25px;
+            font-size: 16px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .nav a:hover {
+            text-decoration: underline;
+        }
+
+        .banner {
+            background: url("https://images.unsplash.com/photo-1569025690938-a00729c9e272?q=80&w=2000") center/cover;
+            height: 260px;
+            color: white;
+            display: flex;
+            align-items: center;
+            padding-left: 60px;
+            font-size: 35px;
+        }
+
+        .box {
+            background: white;
+            width: 85%;
+            margin: 25px auto;
+            padding: 25px;
+            border-radius: 6px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+
+        footer {
+            margin-top: 50px;
+            background: #001b5c;
+            padding: 15px;
+            text-align: center;
+            color: white;
+        }
+    </style>
+
 </head>
 
-<body style="font-family: Arial; max-width: 1000px; margin: auto; padding: 20px;">
+<body>
 
-<header style="border-bottom: 1px solid #ccc; padding-bottom: 10px; margin-bottom: 20px;">
-    <h1 style="margin: 0;">BR Jalan Securities</h1>
+    <div class="nav">
+        <a href="index.html">Home</a>
+        <a href="investment.html">Investment Plans</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+    </div>
 
-    <nav style="margin-top: 10px;">
-        <a href="index.html" style="margin-right: 20px;">Home</a>
-        <a href="investment.html" style="margin-right: 20px;">Investment Plans</a>
-        <a href="#" style="margin-right: 20px;">About Us</a>
-        <a href="#">Contact</a>
-    </nav>
-</header>
+    <div class="banner">
+        BR Jalan Securities
+    </div>
 
-<section>
-    <h2>Company Information</h2>
-    <ul>
-        <li>SEBI Registered Analyst: Mr. Hemang Mehta</li>
-        <li>Registration No.: INZ000199136</li>
-        <li>CDSL DP ID: 18900</li>
-        <li>Established: 1987</li>
-    </ul>
-</section>
+    <div class="box">
+        <h2>Company Information</h2>
+        <ul>
+            <li>SEBI Registered Analyst: Mr. Hemang Mehta</li>
+            <li>Registration No.: INZ000199136</li>
+            <li>CDSL DP ID: 18900</li>
+            <li>Established: 1987</li>
+        </ul>
+    </div>
 
-<section>
-    <h2>Core Investment Services</h2>
-    <ol>
-        <li>AI-based equity selection</li>
-        <li>Block deals & discount opportunities</li>
-        <li>Offline IPO allocations</li>
-        <li>Private equity solutions</li>
-    </ol>
-</section>
+    <div class="box">
+        <h2>Core Investment Services</h2>
 
-<p>Thank you for visiting!</p>
+        <ol>
+            <li>AI-based equity selection</li>
+            <li>Block deals & discount opportunities</li>
+            <li>Offline IPO allocations</li>
+            <li>Private equity solutions</li>
+        </ol>
+    </div>
+
+    <footer>
+        Copyright © BR Jalan Securities. All rights reserved.
+    </footer>
 
 </body>
+
 </html>
