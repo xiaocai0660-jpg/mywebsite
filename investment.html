@@ -2,121 +2,64 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport"content="width=device-width, initial-scale=1.0">
 <title>Investment Services</title>
-<link rel="icon" type="image/png" href="02.png">
+
 <style>
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background: #f4f6fb;
-}
-header {
-    background: #002060;
-    padding: 22px 40px;
-}
-header nav a {
-    color: white;
-    margin-right: 26px;
-    font-weight: bold;
-    text-decoration: none;
-}
-.container {
-    width: 88%;
-    margin: 35px auto;
-}
-.box {
-    background: white;
-    padding: 30px;
-    border-radius: 10px;
-    margin-bottom: 22px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.06);
-}
-.chart-card {
-    display: flex;
-    background: white;
-    border-radius: 10px;
-    overflow: hidden;
-    margin-bottom: 20px;
-}
-.chart-card img {
-    width: 50%;
-}
-.chart-card div {
-    width: 50%;
-    padding: 25px;
-}
-ul {
-    line-height: 33px;
-    font-size: 17px;
-}
-.footer {
-    background: #001a33;
-    margin-top: 50px;
-    color: white;
-    padding: 28px 60px;
-}
+body{margin:0;font-family:Arial;background:#eef4fb;}
+header{background:#002060;padding:22px 40px;}
+header nav a{color:#fff;margin-right:26px;text-decoration:none;font-weight:bold;}
+header nav a:hover{opacity:0.8;}
+.section{width:85%;margin:35px auto;}
+.box{background:white;padding:35px;border-radius:10px;margin-bottom:25px;box-shadow:0 3px 10px rgba(0,0,0,0.08);}
+
+.chartWrap{background:white;padding:15px;border-radius:10px;margin-top:20px;height:260px;}
 </style>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+window.onload=function(){
+var ctx=document.getElementById('c1').getContext('2d');
+new Chart(ctx,{
+type:'line',
+data:{labels:["Mon","Tue","Wed","Thu","Fri"],
+datasets:[{data:[22,32,28,36,45],borderColor:"#002060",borderWidth:3,fill:false}]}
+});
+}
+</script>
+
 </head>
 <body>
 
 <header>
 <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="investment.html">Investment</a>
-    <a href="plan.html">Investment Plan</a>
-    <a href="contact.html">Contact</a>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="investment.html">Investment</a>
+<a href="plan.html">Investment Plan</a>
+<a href="contact.html">Contact</a>
 </nav>
 </header>
 
-<div class="container">
+<div class="section">
+<div class="box">
+<h2>Investment Models</h2>
+<ul>
+<li>Short-Cycle execution</li>
+<li>Block-Deal premium window</li>
+<li>Rotation strategy</li>
+</ul>
 
-    <!-- Dynamic Chart Section -->
-    <div class="chart-card">
-        <img src="https://images.pexels.com/photos/669610/pexels-photo-669610.jpeg" alt="">
-        <div>
-            <h2>Market-Cycle Execution</h2>
-            <p>Short-window execution using structured opportunities and return mapping models.</p>
-        </div>
-    </div>
-
-    <div class="box">
-        <h2>Investment Services</h2>
-        <p>Guided execution-based investment designed for performance & liquidity control.</p>
-
-        <h3>Core Models:</h3>
-        <ul>
-            <li>Short-cycle execution framework</li>
-            <li>Premium entry window arbitrage</li>
-            <li>Risk-adjusted exit system</li>
-            <li>AI-based rotation selection</li>
-        </ul>
-    </div>
-
-    <div class="box">
-        <h2>Execution Strategy Benefits</h2>
-        <ul>
-            <li>Capital recovery windows every short cycle</li>
-            <li>No mandatory long lock-in</li>
-            <li>Controlled downside exposure</li>
-            <li>Opportunity-based accelerated compounding</li>
-        </ul>
-    </div>
-
-    <div class="box">
-        <h2>Who Should Join?</h2>
-        <ul>
-            <li>Working professionals who require liquidity</li>
-            <li>Investors who seek structured decision-making</li>
-            <li>Clients wanting predictable profit cycles</li>
-            <li>Users not comfortable with independent execution</li>
-        </ul>
-    </div>
-
+<div class="chartWrap">
+<canvas id="c1"></canvas>
 </div>
 
-<footer class="footer">
-© 2025 BR Jalan Securities Pvt Ltd. All Rights Reserved
+</div>
+</div>
+
+<footer style="text-align:center;background:#001a33;color:#fff;padding:25px;margin-top:55px;">
+© BR Jalan Securities Pvt Ltd.
 </footer>
 
 </body>
