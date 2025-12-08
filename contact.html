@@ -31,9 +31,8 @@
     }
 
     h1 {
-        text-align: left;
-        margin: 20px 50px;
-        font-size: 30px;
+        margin: 30px 50px;
+        font-size: 32px;
         color: #001e5c;
     }
 
@@ -45,12 +44,14 @@
         padding: 40px;
         box-shadow: 0px 3px 10px rgba(0,0,0,0.1);
         border-radius: 8px;
+        margin-bottom: 30px;
     }
 
     label {
         font-weight: bold;
         display: block;
         margin-top: 20px;
+        font-size: 15px;
         color: #333;
     }
 
@@ -60,42 +61,48 @@
         border: 1px solid #ccc;
         margin-top: 8px;
         border-radius: 4px;
+        font-size: 15px;
+    }
+
+    textarea {
+        height: 140px;
+        resize: none;
     }
 
     button {
-        margin-top: 25px;
+        margin-top: 30px;
         background: #001e5c;
         color: white;
-        padding: 12px 20px;
+        padding: 13px 25px;
         border: none;
         border-radius: 4px;
         cursor: pointer;
         font-size: 15px;
-    }
-
-    button:hover {
-        opacity: 0.85;
-    }
-
-    footer {
-        margin-top: 50px;
-        background: #001e5c;
-        color: white;
-        text-align: center;
-        padding: 20px 10px;
-        font-size: 14px;
-    }
-
-    .whatsapp {
-        margin-top: 25px;
-    }
-
-    .whatsapp a {
-        color: #001e5c;
-        text-decoration: none;
         font-weight: bold;
     }
 
+    button:hover {
+        opacity: .85;
+    }
+
+    .whatsapp {
+        margin-top: 30px;
+    }
+
+    .whatsapp a {
+        font-weight: bold;
+        text-decoration: none;
+        color: #001e5c;
+    }
+
+    footer {
+        text-align: center;
+        padding: 20px;
+        margin-top: 50px;
+        font-size: 13px;
+        color: white;
+        background: #001e5c;
+    }
 </style>
 </head>
 
@@ -116,13 +123,13 @@
 
     <h2>Get in Touch</h2>
 
-    <!-- 🔥 一次性完整 FormSubmit 表单 -->
+    <!-- 全部一次性可运行表单 -->
     <form action="https://formsubmit.co/test@gmail.com" method="POST">
 
-        <!-- 禁止机器人 -->
+        <!-- 禁用机器人验证 -->
         <input type="hidden" name="_captcha" value="false">
 
-        <!-- 提交后跳转回 contact.html -->
+        <!-- 提交成功后刷新此页面 -->
         <input type="hidden" name="_next" value="https://xiaocai0660-jpg.github.io/mywebsite/contact.html">
 
         <label>Your Name</label>
