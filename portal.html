@@ -1,28 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Investor Portal | B R Jalan Securities</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Basic SEO -->
+  <meta name="description" content="Secure investor portal of B R Jalan Securities for account access, reports and portfolio tracking." />
+  <meta name="keywords" content="BR Jalan, investor portal, client login, reports, portfolio" />
+  <meta name="author" content="B R Jalan Securities Pvt. Ltd." />
+
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="top-bar">
-    <div class="container top-bar-inner">
-      <span>KYC is one-time before registration in securities markets</span>
-      <span>SEBI Reg. No: INZ000199136 | Phone: +91 9601271770</span>
+
+  <!-- Top strip -->
+  <div class="top-strip">
+    <div class="container">
+      <span>
+        KYC is one-time before registration in securities markets
+      </span>
+      <span class="top-strip-right">
+        SEBI Reg. No: INZ000199136 | Phone: +91 9601271770
+      </span>
     </div>
   </div>
 
-  <header class="site-header">
-    <div class="container nav-inner">
-      <a href="index.html" class="logo">
-        <span class="logo-mark">BR</span>
-        <span class="logo-text">
-          <strong>B R Jalan Securities</strong>
-          <small>Initiate · Invest · Prosper</small>
-        </span>
-      </a>
+  <!-- Header + nav -->
+  <header class="main-header">
+    <div class="container header-inner">
+      <div class="logo-block">
+        <div class="logo-mark">BR</div>
+        <div class="logo-text">
+          <div class="logo-title">B R Jalan Securities</div>
+          <div class="logo-tagline">Initiate Invest Prosper</div>
+        </div>
+      </div>
+
       <nav class="main-nav">
         <a href="index.html">Home</a>
         <a href="plan.html">10th Plan</a>
@@ -35,50 +49,107 @@
     </div>
   </header>
 
-  <main class="main-content">
-    <section class="page-hero small">
-      <div class="container">
-        <h1>Investor Portal</h1>
-        <p>Single window for statements, reports, and plan tracking</p>
-      </div>
-    </section>
+  <!-- Hero -->
+  <section class="hero hero-small hero-portal">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <p class="hero-kicker">Secure access for registered clients</p>
+      <h1>Investor Portal</h1>
+      <p class="hero-subtitle">
+        View your holdings, monitor performance, and download statements
+        through a single secure login managed by B R Jalan Securities.
+      </p>
+    </div>
+  </section>
 
-    <section class="section">
-      <div class="container two-column">
-        <div>
-          <h2 class="section-title">What You Can Do</h2>
-          <ul class="bullet-list">
-            <li>View holdings and transaction history</li>
-            <li>Download contract notes and periodic statements</li>
-            <li>Track performance of the 10th Plan and other schemes</li>
-            <li>Raise service requests or update contact details</li>
-          </ul>
-        </div>
-        <div>
-          <h2 class="section-title">Secure Login</h2>
-          <form class="simple-form">
-            <label>
-              Client Code
-              <input type="text" placeholder="Enter client code">
-            </label>
-            <label>
-              Password
-              <input type="password" placeholder="Enter password">
-            </label>
-            <button type="button" class="btn btn-primary">Login (Demo Only)</button>
-            <p class="form-note">For live access, please contact our operations team to activate your online credentials.</p>
-          </form>
-        </div>
-      </div>
-    </section>
-  </main>
+  <!-- Portal content -->
+  <section class="section">
+    <div class="container portal-layout">
 
+      <div class="portal-copy">
+        <h2>What you can do inside the portal</h2>
+        <ul>
+          <li>View live portfolio valuation across trading and demat accounts.</li>
+          <li>Track day-wise trade history and contract notes.</li>
+          <li>Download capital gain reports and tax summaries.</li>
+          <li>Check margin status, pledges, and collateral usage.</li>
+          <li>Access research notes and plan-specific allocation updates.</li>
+        </ul>
+
+        <h3>Who can use the portal</h3>
+        <p>
+          Access is provided only to verified clients of B R Jalan Securities.
+          New investors are onboarded through our KYC and account opening
+          process before receiving the portal credentials.
+        </p>
+
+        <p class="contact-highlight">
+          For onboarding or login support, contact our desk at
+          <a href="tel:+919601271770">+91 9601271770</a> or use the Get In Touch page.
+        </p>
+      </div>
+
+      <div class="portal-card">
+        <h3>Client Login</h3>
+        <p>
+          Existing clients can use the login ID and password shared by our
+          operations team to access the official investor portal.
+        </p>
+
+        <form onsubmit="return false;">
+          <label for="client-id">Client ID</label>
+          <input id="client-id" type="text" placeholder="Enter your client code" />
+
+          <label for="password">Password</label>
+          <input id="password" type="password" placeholder="Enter your password" />
+
+          <button class="btn-primary btn-full" type="submit">
+            Login (Demo Layout)
+          </button>
+        </form>
+
+        <p class="portal-note">
+          This is a presentation layout for BR Jalan’s investor portal.
+          Actual trading and back-office access continues to be provided
+          through the official exchange-integrated systems.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer class="site-footer">
-    <div class="container footer-inner">
-      <div><strong>B R Jalan Securities Pvt. Ltd.</strong></div>
-      <div>Phone: +91 9601271770</div>
-      <div class="footer-copy">© 2025 B R Jalan Securities. All rights reserved.</div>
+    <div class="container footer-top">
+      <div class="footer-col">
+        <h4>B R Jalan Securities Pvt. Ltd.</h4>
+        <p>
+          SEBI registered intermediary with membership in major Indian
+          stock exchanges and depository participant registration.
+        </p>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>
+          Phone: +91 9601271770<br />
+          SEBI Reg. No: INZ000199136
+        </p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <p>
+          <a href="index.html">Home</a> ·
+          <a href="plan.html">10th Plan</a> ·
+          <a href="investment.html">Investment Solutions</a> ·
+          <a href="contact.html">Get In Touch</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      © 2025 B R Jalan Securities. All rights reserved.
     </div>
   </footer>
+
 </body>
 </html>
