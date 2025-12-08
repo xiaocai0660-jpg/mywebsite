@@ -6,162 +6,60 @@
     <title>BR Jalan Securities</title>
     <link rel="icon" type="image/png" href="02.png">
     <style>
-        *{box-sizing:border-box;margin:0;padding:0;}
-        body{
-            font-family:Arial,Helvetica,sans-serif;
-            background:#f3f5fb;
-            color:#222;
-        }
-        a{text-decoration:none;color:inherit;}
-
-        header{
-            background:#002060;
-            color:#fff;
-            padding:18px 60px;
-            display:flex;
-            align-items:center;
-            justify-content:space-between;
-        }
-        .logo{
-            font-size:24px;
-            font-weight:bold;
-            letter-spacing:1px;
-        }
-        nav a{
-            color:#fff;
-            margin-left:26px;
-            font-size:15px;
-            font-weight:bold;
-        }
-        nav a:hover{opacity:.8;}
-
-        .banner{
-            background:linear-gradient(135deg,#002060,#0047b3);
-            color:#fff;
-            padding:80px 60px;
-        }
-        .banner h1{
-            font-size:40px;
-            margin-bottom:15px;
-        }
-        .banner p{
-            max-width:640px;
-            line-height:1.6;
-            font-size:16px;
-        }
-        .banner-btns{
-            margin-top:30px;
-        }
-        .btn-primary,.btn-outline{
-            display:inline-block;
-            padding:12px 26px;
-            border-radius:4px;
-            font-size:15px;
-            font-weight:bold;
-            margin-right:14px;
-        }
-        .btn-primary{
-            background:#ff4d4f;
-            color:#fff;
-        }
-        .btn-outline{
-            border:1px solid #fff;
-            color:#fff;
-        }
-        .btn-primary:hover,.btn-outline:hover{opacity:.85;}
-
-        .wrapper{
-            max-width:1100px;
-            margin:40px auto 60px;
-            padding:0 20px;
-        }
-        .section{
-            background:#fff;
-            border-radius:8px;
-            padding:28px 26px;
-            box-shadow:0 4px 15px rgba(0,0,0,.06);
-            margin-bottom:26px;
-        }
-        .section h2{
-            font-size:22px;
-            margin-bottom:10px;
-            color:#002060;
-        }
-        .section p{line-height:1.7;font-size:15px;}
-        .grid-3{
-            display:grid;
-            grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-            gap:20px;
-            margin-top:18px;
-        }
-        .card{
-            background:#fff;
-            border-radius:8px;
-            padding:20px 18px;
-            border:1px solid #e4e7f2;
-            box-shadow:0 3px 10px rgba(0,0,0,.04);
-        }
-        .card h3{
-            font-size:18px;
-            margin-bottom:8px;
-            color:#002060;
-        }
-        .card p{font-size:14px;line-height:1.6;}
-
-        .label{
-            display:inline-block;
-            padding:3px 10px;
-            border-radius:20px;
-            background:#e6f0ff;
-            color:#002060;
-            font-size:11px;
-            font-weight:bold;
-            margin-bottom:8px;
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #eef3fb;
         }
 
-        footer{
-            background:#001433;
-            color:#d8def5;
-            padding:30px 60px 22px;
-            font-size:13px;
-            line-height:1.7;
-        }
-        footer strong{color:#fff;}
-        .footer-cols{
-            display:grid;
-            grid-template-columns:2fr 2fr 1.5fr;
-            gap:26px;
-            margin-bottom:18px;
-        }
-        .footer-bottom{
-            text-align:center;
-            border-top:1px solid rgba(255,255,255,.08);
-            padding-top:10px;
-            font-size:12px;
-        }
-        .whatsapp{
-            margin-top:10px;
-        }
-        .whatsapp a{
-            color:#25d366;
-            font-weight:bold;
+        header {
+            background: #002060;
+            padding: 22px 40px;
+            color: white;
         }
 
-        @media(max-width:768px){
-            header{flex-direction:column;align-items:flex-start;padding:14px 20px;}
-            nav{margin-top:8px;}
-            nav a{margin-left:14px;}
-            .banner{padding:50px 20px;}
-            .banner h1{font-size:30px;}
-            footer{padding:24px 20px;}
-            .footer-cols{grid-template-columns:1fr;}
+        header nav a {
+            color: white;
+            margin-right: 26px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        header nav a:hover {
+            opacity: 0.85;
+        }
+
+        .banner {
+            background-image: url("https://images.pexels.com/photos/669615/pexels-photo-669615.jpeg");
+            background-size: cover;
+            height: 350px;
+            display: flex;
+            align-items: center;
+            padding-left: 60px;
+            color: white;
+        }
+
+        .section {
+            width: 85%;
+            background: white;
+            margin: 35px auto;
+            padding: 30px;
+            border-radius: 8px;
+        }
+
+        footer {
+            background: #001a33;
+            color: white;
+            padding: 25px 50px;
+            margin-top: 45px;
+            font-size: 15px;
         }
     </style>
 </head>
 <body>
 
 <header>
-    <div class="logo">BR Jalan Securities</div>
     <nav>
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
@@ -171,98 +69,32 @@
     </nav>
 </header>
 
-<section class="banner">
-    <h1>Welcome to BR Jalan Securities</h1>
-    <p>
-        Providing research-driven stock advisory, disciplined execution and risk-aware investment planning
-        to help investors grow and protect their capital.
-    </p>
-    <div class="banner-btns">
-        <a href="plan.html" class="btn-primary">View 10th Collective Investment Plan</a>
-        <a href="contact.html" class="btn-outline">Talk to Our Team</a>
-    </div>
-</section>
+<div class="banner">
+    <h1 style="font-size:40px;">Initiate Invest Prosper</h1>
+</div>
 
-<div class="wrapper">
+<div class="section">
+    <h2>Why Choose BR Jalan Securities?</h2>
+    <ul>
+        <li>Research-driven market analysis</li>
+        <li>AI-based stock selection & rotation</li>
+        <li>Block-deal premium window access</li>
+        <li>Short-cycle entry & controlled risk exit</li>
+    </ul>
+</div>
 
-    <div class="section">
-        <h2>Who We Serve</h2>
-        <p>
-            We work primarily with serious investors who value compliance, transparency and a structured
-            approach to wealth creation. Our focus is on long-term relationships instead of short-term tips.
-        </p>
-        <div class="grid-3">
-            <div class="card">
-                <span class="label">RESEARCH</span>
-                <h3>Research-led Ideas</h3>
-                <p>Stocks and strategies screened through a combination of fundamental research, technical structure and risk filters.</p>
-            </div>
-            <div class="card">
-                <span class="label">EXECUTION</span>
-                <h3>Disciplined Execution</h3>
-                <p>Clear entry and exit frameworks, position sizing discipline and strong focus on capital protection.</p>
-            </div>
-            <div class="card">
-                <span class="label">RISK</span>
-                <h3>Compliance & Risk</h3>
-                <p>Operations aligned with SEBI and exchange guidelines, with continuous attention to investor awareness and disclosures.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="section">
-        <h2>Key Focus Areas</h2>
-        <div class="grid-3">
-            <div class="card">
-                <h3>AI-Assisted Stock Rotation</h3>
-                <p>Using data-driven systems to shortlist sectors and stocks, combined with human review before execution.</p>
-            </div>
-            <div class="card">
-                <h3>Block & Bulk Opportunities</h3>
-                <p>Participating in selected opportunities where pricing and liquidity are suitable for eligible investors.</p>
-            </div>
-            <div class="card">
-                <h3>Structured Investment Plans</h3>
-                <p>Customised approaches for different risk profiles instead of one-size-fits-all recommendations.</p>
-            </div>
-        </div>
-    </div>
-
+<div class="section">
+    <h2>Client Benefits</h2>
+    <ul>
+        <li>Predictable capital recovery cycles</li>
+        <li>No locking period</li>
+        <li>Instant advisory access</li>
+        <li>Short investment liquidity cycle</li>
+    </ul>
 </div>
 
 <footer>
-    <div class="footer-cols">
-        <div>
-            <div style="margin-bottom:10px;">
-                <strong>BR Jalan Securities Pvt Ltd.</strong><br>
-                CIN: U67120MH1997PTC108736<br>
-                SEBI Registration No. INB/INF INZ000199136<br>
-                Member: BSE, NSE, MCX, CDSL
-            </div>
-            <div class="whatsapp">
-                WhatsApp for investment queries:
-                <a href="https://wa.me/919601271770" target="_blank">+91 96012 71770</a>
-            </div>
-        </div>
-        <div>
-            <strong>Address</strong><br>
-            903, Marathon Icon, Marathon Nextgen Campus,<br>
-            Veer Santaji Lane, G K Kadam Marg,<br>
-            Lower Parel (West), Mumbai 400013.
-        </div>
-        <div>
-            <strong>Contact</strong><br>
-            Email: brjalan728@gmail.com<br>
-            Support: +91-2224923458
-        </div>
-    </div>
-    <div style="margin-bottom:6px;font-size:12px;">
-        <strong>Attention Investor:</strong> Investment in securities market is subject to market risks. Please read all
-        related documents carefully before investing.
-    </div>
-    <div class="footer-bottom">
-        © 2025 BR Jalan Securities Pvt Ltd. All rights reserved.
-    </div>
+    Copyright © 2025 BR Jalan Securities Pvt Ltd.
 </footer>
 
 </body>
