@@ -1,93 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BR Jalan Securities</title>
-
-<style>
-body{margin:0;font-family:Arial;background:#eef4fb;}
-header{background:#002060;padding:22px 40px;}
-header nav a{color:#fff;margin-right:26px;text-decoration:none;font-weight:bold;}
-header nav a:hover{opacity:0.7;}
-
-.slider{width:100%;height:420px;overflow:hidden;position:relative;}
-.slide{display:none;width:100%;height:100%;background-size:cover;background-position:center;}
-.active{display:block;}
-
-.section{width:85%;margin:35px auto;}
-.box{background:white;padding:35px;border-radius:10px;margin-bottom:28px;box-shadow:0 3px 10px rgba(0,0,0,0.08);}
-
-footer{
-background:#001a33;
-color:#fff;
-padding:35px 50px;
-font-size:14px;
-margin-top:55px;
-}
-footer div{margin-bottom:12px;}
-footer a{color:#00d4ff;text-decoration:none;font-weight:bold;}
-
-</style>
-
-<script>
-let i=0;
-function rotateBanner(){
-let slides=document.querySelectorAll('.slide');
-slides.forEach(x=>x.style.display='none');
-i=(i+1)%slides.length;
-slides[i].style.display='block';
-}
-setInterval(rotateBanner,3500);
-</script>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | B R Jalan Securities</title>
+    <link rel="stylesheet" href="style.css"> 
 </head>
 <body>
+    <header>
+        <nav>
+            <a href="index.html">Home</a> 
+            <a href="about.html">About Us</a>
+            <a href="investment.html">Investment Strategies</a>
+            <a href="plan.html">Collective Schemes</a> 
+            <a href="contact.html">Contact Us</a>
+        </nav>
+    </header>
 
-<header>
-<nav>
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="investment.html">Investment</a>
-<a href="plan.html">Investment Plan</a>
-<a href="contact.html">Contact</a>
-</nav>
-</header>
+    <div class="Container">
+        
+        <section id="hero-section">
+            <h1>B R Jalan Securities Pvt. Ltd.</h1>
+            <h2>Initiate | Invest | Prosper</h2>
+            
+            <p>We are an organized, strategic, and capital-structured cooperative committed to creating a disciplined, coordinated, and goal-oriented win-win trading team in the huge market like India[cite: 36]. Our objective is to help our clients achieve sustained and stable returns[cite: 6].</p>
 
-<div class="slider">
-<div class="slide active" style="background-image:url('https://images.pexels.com/photos/669615/pexels-photo-669615.jpeg?auto=compress');"></div>
-<div class="slide" style="background-image:url('https://images.pexels.com/photos/6801643/pexels-photo-6801643.jpeg?auto=compress');"></div>
-<div class="slide" style="background-image:url('https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress');"></div>
-</div>
+            <a href="plan.html" class="cta-button">Explore Our Schemes</a>
+        </section>
 
-<div class="section">
-<div class="box">
-<h2>Why BR Jalan Securities?</h2>
-<ul>
-<li>AI-based Stock Execution Models</li>
-<li>Premium Entry Block-Deal Window</li>
-<li>Low Risk & Short Execution Cycle</li>
-<li>Market-driven allocation logic</li>
-</ul>
-</div>
+        <hr>
 
-<div class="box">
-<h2>Client Advantages</h2>
-<ul>
-<li>No long commitment cycles</li>
-<li>Fast recovery model</li>
-<li>Dedicated advisory team</li>
-<li>Multi-layer plan execution</li>
-</ul>
-</div>
-</div>
+        <section id="scheme-summary">
+            <h2>The Collective Investment Schemes</h2>
+            <p>This is not a one-time short-term arbitrage, but a systematic asset growth path[cite: 22]. When you join, you will transform from an ordinary investor to a securities trader[cite: 28].</p>
+            
+            <h3>How We Generate Stable Income[cite: 13]:</h3>
+            <ul>
+                <li>**AI Smart Short-Term Strategy:** New intelligent trading based on neural network models[cite: 16].</li>
+                <li>**Block-Trade Strategy:** Advance trading time through strategic high-discount arbitrage[cite: 18, 70].</li>
+                <li>**Priority Allotment Rights:** Access to Primitive IPO shares, FPO, and Private Equity[cite: 17].</li>
+            </ul>
 
-<footer>
-<div><strong>BR Jalan Securities Pvt Ltd</strong></div>
-<div>903 Marathon Icon Nexgen Campus Mumbai</div>
-<div>Email: brjalan728@email.com</div>
-<div>WhatsApp: <a href="https://wa.me/919601271770">Click To Chat</a></div>
-</footer>
-
+            <a href="investment.html" class="button-link">See Investment Strategies in Detail</a>
+        </section>
+    </div>
 </body>
 </html>
