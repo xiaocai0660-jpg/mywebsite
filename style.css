@@ -1,220 +1,37 @@
-/* style.css - High Fidelity Finance Theme with Carousel */
+/* reset & base */
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: Arial, sans-serif; color:#333; line-height:1.6; }
+a { color: inherit; text-decoration: none; }
+.container { max-width:1200px; margin:0 auto; padding:0 15px; }
 
-/* 1. Global Reset & Fonts */
-* {
-    box-sizing: border-box;
-}
+/* top bar */
+.top-bar { background:#002060; color:#fff; padding:6px 0; text-align:right; font-size:14px; }
+.top-contact { margin-right:15px; color:#fff; }
 
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
-}
+/* header nav */
+.site-header { background:#fff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); position:sticky; top:0; z-index:100; }
+.header-inner { display:flex; align-items:center; justify-content:space-between; padding:10px 0; }
+.logo img { height:40px; }
+.main-nav ul { display:flex; list-style:none; }
+.main-nav li { margin-left:20px; }
+.main-nav a { font-weight:500; color:#002060; }
 
-a {
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
+/* hero banner */
+.hero-banner { position: relative; background: url('../assets/home‑banner.jpg') center/cover no-repeat; height: 70vh; min-height:400px; display:flex; align-items:center; justify-content:center; }
+.banner-overlay { position:absolute; top:0; left:0; width:100%; height:100%; background: rgba(0,0,20,0.5); }
+.banner-text { position: relative; color:#fff; text-align:center; padding:20px; }
+.banner-text h1 { font-size: 48px; margin-bottom: 20px; }
+.banner-text p { font-size: 20px; margin-bottom: 30px; }
+.btn { padding: 12px 24px; border-radius: 4px; font-size:16px; display:inline-block; }
+.btn‑primary { background: #0060c0; color:#fff; }
 
-/* 2. Top Navigation Bar (Dark Blue & Gold) */
-header {
-    background-color: #002060; /* Brand Dark Blue */
-    color: white;
-    padding: 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
+/* footer */
+.site-footer { background:#002060; color:#fff; padding:20px 0; text-align:center; font-size:14px; }
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 15px 20px;
-}
-
-.logo-text {
-    font-size: 24px;
-    font-weight: bold;
-    color: #c5a059; /* Brand Gold */
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-}
-
-nav ul li {
-    margin-left: 20px;
-}
-
-nav a {
-    color: white;
-    font-size: 14px;
-    font-weight: 600;
-    padding: 8px 12px;
-    border-radius: 4px;
-}
-
-nav a:hover {
-    background-color: #c5a059; /* Gold hover */
-    color: #002060;
-}
-
-/* 3. Hero Section (Image Carousel) - NEW STYLES */
-.slider-container {
-    position: relative;
-    width: 100%;
-    height: 500px; /* 控制轮播图高度 */
-    overflow: hidden;
-}
-
-.slide {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
-    padding: 20px;
-}
-
-.slide.active {
-    opacity: 1;
-    z-index: 10;
-}
-
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(rgba(0, 32, 96, 0.7), rgba(0, 32, 96, 0.5));
-    z-index: 15;
-}
-
-.slide-content {
-    position: relative;
-    z-index: 20;
-}
-
-.slide-content h1 {
-    font-size: 3.5rem;
-    margin-bottom: 10px;
-    color: #fff;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-    border-bottom: none; /* 移除 h1 的下划线 */
-    padding-bottom: 0;
-}
-
-.slide-content h2 {
-    font-size: 1.5rem;
-    font-weight: 300;
-    color: #c5a059; /* Gold */
-    margin-top: 0;
-    margin-bottom: 30px;
-}
-
-.slide-content p {
-    max-width: 700px;
-    font-size: 1.1rem;
-    margin-bottom: 30px;
-}
-
-/* 4. Buttons */
-.cta-button {
-    background-color: #c5a059;
-    color: #002060;
-    padding: 12px 30px;
-    font-size: 16px;
-    font-weight: bold;
-    border-radius: 2px;
-    text-transform: uppercase;
-    border: 2px solid #c5a059;
-}
-
-.cta-button:hover {
-    background-color: transparent;
-    color: #fff;
-    border-color: #fff;
-}
-
-.button-link {
-    color: #002060;
-    font-weight: bold;
-    border-bottom: 2px solid #c5a059;
-}
-
-/* 5. Main Content Container */
-.Container {
-    max-width: 1200px;
-    margin: 40px auto;
-    padding: 0 20px;
-}
-
-h1 {
-    color: #002060;
-    border-bottom: 2px solid #c5a059;
-    padding-bottom: 10px;
-    margin-bottom: 30px;
-}
-
-/* 6. Strategy Cards (Grid Layout) */
-.strategy-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    margin-top: 30px;
-}
-
-.strategy-card {
-    background: white;
-    padding: 30px;
-    border-top: 4px solid #c5a059; /* Gold top border */
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    transition: transform 0.3s;
-}
-
-.strategy-card:hover {
-    transform: translateY(-5px);
-}
-
-.strategy-card h3 {
-    color: #002060;
-    margin-top: 0;
-}
-
-/* 7. Footer */
-footer {
-    background-color: #333;
-    color: #ccc;
-    text-align: center;
-    padding: 20px;
-    margin-top: 50px;
-    font-size: 0.9rem;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    nav { flex-direction: column; }
-    nav ul { margin-top: 15px; }
-    .slide-content h1 { font-size: 2.5rem; }
+/* responsive */
+@media (max-width:768px) {
+  .header-inner { flex-direction: column; }
+  .main-nav ul { flex-direction: column; gap:12px; }
+  .hero-banner { height:50vh; }
+  .banner-text h1 { font-size:32px; }
 }
