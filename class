@@ -1,0 +1,94 @@
+/* ===== Investment Solutions page layout ===== */
+
+.hero-investment {
+  background-image: url("02.png"); /* 和首页同一张大图 */
+  background-size: cover;
+  background-position: center;
+}
+
+/* 通用区块 */
+.section {
+  padding: 60px 0;
+}
+
+.section-light {
+  padding: 60px 0;
+  background: #f5f7fb;
+}
+
+/* 标题区 */
+.solutions-intro {
+  max-width: 760px;
+}
+
+.solutions-intro h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+
+/* 卡片栅格 */
+.solutions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.solution-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px 18px;
+  box-shadow: 0 8px 18px rgba(15, 35, 80, 0.08);
+  border-top: 4px solid #c99a3b;
+  font-size: 14px;
+  color: #3a4360;
+}
+
+.solution-card h3 {
+  margin-top: 0;
+  margin-bottom: 6px;
+  font-size: 18px;
+  color: #1b2945;
+}
+
+.solution-tag {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #9a7c33;
+  margin-bottom: 10px;
+}
+
+/* 下半部分 选择区布局 */
+.choose-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(260px, 1.2fr);
+  gap: 28px;
+}
+
+@media (max-width: 900px) {
+  .choose-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.choose-main ul {
+  padding-left: 18px;
+  margin: 10px 0 0;
+  font-size: 14px;
+  color: #3a4360;
+}
+
+.choose-aside {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px 18px;
+  box-shadow: 0 8px 18px rgba(15, 35, 80, 0.06);
+}
+
+.choose-aside h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 17px;
+  color: #1b2945;
+}
