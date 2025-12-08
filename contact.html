@@ -4,157 +4,149 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
-
-    <!-- Website Icon -->
     <link rel="icon" type="image/png" href="02.png">
 
-    <style>
-        body {
-            font-family: Arial;
-            margin: 0;
-            background: #f7f8fa;
-        }
+<style>
+    body {
+        font-family: Arial;
+        margin: 0;
+        background: #f7f8fa;
+    }
 
-        header {
-            background: #001e5c;
-            color: white;
-        }
+    header {
+        background: #001e5c;
+        padding: 20px 50px;
+        color: white;
+    }
 
-        header h1 {
-            margin: 0;
-            padding: 25px 20px;
-            font-size: 28px;
-        }
+    header nav a {
+        color: white;
+        text-decoration: none;
+        margin-right: 25px;
+        font-size: 15px;
+    }
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin-right: 25px;
-            font-size: 15px;
-        }
+    header nav a:hover {
+        opacity: 0.85;
+    }
 
-        nav {
-            padding: 10px 20px;
-            background: #001e5c;
-        }
+    h1 {
+        text-align: left;
+        margin: 20px 50px;
+        font-size: 30px;
+        color: #001e5c;
+    }
 
-        .container {
-            width: 80%;
-            margin: auto;
-            padding: 50px 0;
-        }
+    .container {
+        width: 90%;
+        max-width: 1100px;
+        margin: auto;
+        background: white;
+        padding: 40px;
+        box-shadow: 0px 3px 10px rgba(0,0,0,0.1);
+        border-radius: 8px;
+    }
 
-        h2 {
-            font-size: 24px;
-            margin-bottom: 15px;
-        }
+    label {
+        font-weight: bold;
+        display: block;
+        margin-top: 20px;
+        color: #333;
+    }
 
-        label {
-            display: block;
-            font-size: 15px;
-            margin-bottom: 8px;
-            margin-top: 18px;
-            font-weight: bold;
-        }
+    input, textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        margin-top: 8px;
+        border-radius: 4px;
+    }
 
-        input,
-        textarea {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #ccc;
-            font-size: 15px;
-            border-radius: 3px;
-        }
+    button {
+        margin-top: 25px;
+        background: #001e5c;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 15px;
+    }
 
-        textarea {
-            height: 120px;
-        }
+    button:hover {
+        opacity: 0.85;
+    }
 
-        button {
-            background: #001e5c;
-            color: white;
-            padding: 12px 22px;
-            font-size: 15px;
-            border: none;
-            margin-top: 18px;
-            cursor: pointer;
-            border-radius: 4px;
-        }
+    footer {
+        margin-top: 50px;
+        background: #001e5c;
+        color: white;
+        text-align: center;
+        padding: 20px 10px;
+        font-size: 14px;
+    }
 
-        button:hover {
-            opacity: 0.85;
-        }
+    .whatsapp {
+        margin-top: 25px;
+    }
 
-        .bottom-info {
-            margin-top: 30px;
-            font-size: 15px;
-        }
+    .whatsapp a {
+        color: #001e5c;
+        text-decoration: none;
+        font-weight: bold;
+    }
 
-        footer {
-            width: 100%;
-            text-align: center;
-            padding: 15px 0;
-            background: #001e5c;
-            color: white;
-            margin-top: 60px;
-            font-size: 14px;
-        }
-
-        .whatsapp-link {
-            margin-top: 10px;
-            display: inline-block;
-            color: #001e5c;
-            font-weight: bold;
-        }
-
-        .whatsapp-link:hover {
-            text-decoration: underline;
-        }
-    </style>
+</style>
 </head>
 
 <body>
 
-    <header>
-        <h1>Contact Us</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About Us</a>
-            <a href="investment.html">Investment Plans</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
+<header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="investment.html">Investment Plans</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
 
-    <div class="container">
-        <h2>Get in Touch</h2>
+<h1>Contact Us</h1>
 
-        <!-- FORM START -->
-        <form action="https://formsubmit.co/YOUR_EMAIL_HERE" method="POST">
+<div class="container">
 
-            <input type="hidden" name="_captcha" value="false">
+    <h2>Get in Touch</h2>
 
-            <label>Your Name</label>
-            <input type="text" name="name" placeholder="Enter your full name" required>
+    <!-- 🔥 一次性完整 FormSubmit 表单 -->
+    <form action="https://formsubmit.co/test@gmail.com" method="POST">
 
-            <label>Your Email</label>
-            <input type="email" name="email" placeholder="Enter your email address" required>
+        <!-- 禁止机器人 -->
+        <input type="hidden" name="_captcha" value="false">
 
-            <label>Your Message</label>
-            <textarea name="message" placeholder="Write your message..." required></textarea>
+        <!-- 提交后跳转回 contact.html -->
+        <input type="hidden" name="_next" value="https://xiaocai0660-jpg.github.io/mywebsite/contact.html">
 
-            <button type="submit">Submit Message</button>
-        </form>
-        <!-- FORM END -->
+        <label>Your Name</label>
+        <input type="text" name="name" placeholder="Enter your full name" required>
 
-        <div class="bottom-info">
-            Or reach us directly on WhatsApp:<br><br>
-            <a class="whatsapp-link" href="https://wa.me/919601271770" target="_blank">💬 Chat on WhatsApp</a>
-        </div>
+        <label>Your Email</label>
+        <input type="email" name="email" placeholder="Enter your email address" required>
+
+        <label>Your Message</label>
+        <textarea name="message" placeholder="Write your message..." required></textarea>
+
+        <button type="submit">Submit Message</button>
+    </form>
+
+    <div class="whatsapp">
+        <p>Or reach us directly on WhatsApp:</p>
+        <a href="https://wa.me/919601271770" target="_blank">📲 Chat on WhatsApp</a>
     </div>
 
-    <footer>
-        © 2025 BR Jalan Securities Private Limited — All Rights Reserved
-    </footer>
+</div>
+
+<footer>
+    © 2025 BR Jalan Securities Private Limited — All Rights Reserved
+</footer>
 
 </body>
 </html>
