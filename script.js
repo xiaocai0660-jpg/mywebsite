@@ -1,36 +1,50 @@
-// Simple hero slider
-const slides = document.querySelectorAll('.hero-slider .slide');
-const prevBtn = document.querySelector('.hero-slider .prev');
-const nextBtn = document.querySelector('.hero-slider .next');
+// Simple hero slider for the home page
 
-let current = 0;
+const slides = Array.from(document.querySelectorAll(".hero-slide"));
+const dotsContainer = document.querySelector(".hero-dots");
+const prevBtn = document.querySelector(".hero-arrow-left");
+const nextBtn = document.querySelector(".hero-arrow-right");
 
-function showSlide(index) {
-  slides.forEach((s, i) => {
-    s.classList.toggle('active', i === index);
-  });
-}
+if (slides.length > 0 && dotsContainer) {
+  let current = 0;
+  let timer = null;
 
-function nextSlide() {
-  current = (current + 1) % slides.length;
-  showSlide(current);
-}
-
-function prevSlide() {
-  current = (current - 1 + slides.length) % slides.length;
-  showSlide(current);
-}
-
-if (slides.length > 0) {
-  let timer = setInterval(nextSlide, 7000);
-
-  nextBtn && nextBtn.addEventListener('click', () => {
-    clearInterval(timer);
-    nextSlide();
+  // Create dots
+  slides.forEach((_, index) => {
+    const dot = document.createElement("button");
+    if (index === 0) dot.classList.add("active");
+    dot.addEventListener("click", () => goToSlide(index));
+    dotsContainer.appendChild(dot);
   });
 
-  prevBtn && prevBtn.addEventListener('click', () => {
-    clearInterval(timer);
-    prevSlide();
-  });
+  const dots = Array.from(dotsContainer.querySelectorAll("button"));
+
+  function goToSlide(index) {
+    slides[current].classList.remove("active");
+    dots[current].classList.remove("active");
+
+    current = (index + slides.length) % slides.length;
+
+    slides[current].classList.add("active");
+    dots[current].classList.add("active");
+    restartTimer();
+  }
+
+  function nextSlide() {
+    goToSlide(current + 1);
+  }
+
+  function prevSlide() {
+    goToSlide(current - 1);
+  }
+
+  function restartTimer() {
+    if (timer) clearInterval(timer);
+    timer = setInterval(nextSlide, 7000);
+  }
+
+  if (nextBtn) nextBtn.addEventListener("click", nextSlide);
+  if (prevBtn) prevBtn.addEventListener("click", prevSlide);
+
+  restartTimer();
 }
