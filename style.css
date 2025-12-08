@@ -1,0 +1,85 @@
+/* style.css */
+
+/* --- Global Styles --- */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    background-color: #f4f4f9; /* Light background */
+    color: #333;
+}
+
+.Container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h1, h2, h3 {
+    color: #4a3a2a; /* Deep Brown (A professional color) */
+    border-bottom: 2px solid #e0c8a8; /* Lighter accent line */
+    padding-bottom: 10px;
+    margin-top: 25px;
+}
+
+/* --- Header and Navigation --- */
+header {
+    background-color: #1f3a5f; /* Dark Blue/Navy (Common for Finance) */
+    color: #fff;
+    padding: 15px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover {
+    background-color: #e0c8a8; /* Gold/Tan accent on hover */
+    color: #1f3a5f;
+    border-radius: 4px;
+}
+
+/* --- Buttons and Links --- */
+.cta-button, .contact-button, .button-link {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 15px;
+    background-color: #e0c8a8; /* Gold/Tan */
+    color: #1f3a5f;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover, .contact-button:hover, .button-link:hover {
+    background-color: #d1b48c;
+}
+
+/* --- List Styles --- */
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul li {
+    background: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-left: 5px solid #4a3a2a;
+}
