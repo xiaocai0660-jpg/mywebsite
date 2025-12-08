@@ -48,3 +48,47 @@ if (slides.length > 0 && dotsContainer) {
 
   restartTimer();
 }
+// Simple hero slider for the home page
+
+document.addEventListener("DOMContentLoaded", function () {
+  const slides = Array.from(document.querySelectorAll(".hero-slide"));
+  if (!slides.length) return;
+
+  const prevBtn = document.querySelector(".hero-prev");
+  const nextBtn = document.querySelector(".hero-next");
+
+  let index = 0;
+  let timer = null;
+
+  function show(i) {
+    slides.forEach((s, idx) => {
+      s.classList.toggle("active", idx === i);
+    });
+    index = i;
+  }
+
+  function next() {
+    show((index + 1) % slides.length);
+  }
+
+  function prev() {
+    show((index - 1 + slides.length) % slides.length);
+  }
+
+  if (nextBtn) nextBtn.addEventListener("click", () => {
+    next();
+    restart();
+  });
+
+  if (prevBtn) prevBtn.addEventListener("click", () => {
+    prev();
+    restart();
+  });
+
+  function restart() {
+    if (timer) clearInterval(timer);
+    timer = setInterval(next, 7000);
+  }
+
+  restart();
+});
