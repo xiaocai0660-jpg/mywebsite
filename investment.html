@@ -1,41 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Investment Services</title>
-<link rel="icon" type="image/png" href="favicon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investment Solutions | BR Jalan Securities</title>
+    <link rel="icon" type="image/png" href="02.png">
+    <style>
+        *{box-sizing:border-box;margin:0;padding:0;}
+        body{font-family:Arial,Helvetica,sans-serif;background:#f3f5fb;color:#222;}
+        a{text-decoration:none;color:inherit;}
 
-<style>
-body{
-    font-family:Arial;
-    margin:0;
-    background:white;
-}
+        header{
+            background:#002060;
+            color:#fff;
+            padding:18px 60px;
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+        }
+        .logo{font-size:22px;font-weight:bold;}
+        nav a{color:#fff;margin-left:26px;font-size:15px;font-weight:bold;}
+        nav a:hover{opacity:.8;}
 
-header{
-    background:#001e5c;
-    padding:25px 60px;
-    color:white;
-}
+        .wrapper{
+            max-width:1000px;
+            margin:40px auto 60px;
+            padding:0 20px;
+        }
+        h1{font-size:30px;color:#002060;margin-bottom:10px;}
+        h2{font-size:20px;color:#002060;margin:22px 0 8px;}
+        p{line-height:1.7;font-size:15px;margin-bottom:8px;}
+        ul{margin-left:18px;margin-bottom:8px;}
+        li{line-height:1.6;font-size:15px;margin-bottom:4px;}
 
-header nav a{
-    color:white;
-    text-decoration:none;
-    margin-right:25px;
-}
+        .box{
+            background:#fff;
+            border-radius:8px;
+            padding:26px 24px;
+            box-shadow:0 4px 15px rgba(0,0,0,.06);
+            margin-bottom:20px;
+        }
+        .tag{
+            display:inline-block;
+            padding:3px 10px;
+            border-radius:18px;
+            background:#e6f0ff;
+            color:#002060;
+            font-size:11px;
+            font-weight:bold;
+            margin-bottom:8px;
+        }
 
-.container{
-    width:85%;
-    margin:auto;
-    margin-top:40px;
-}
-</style>
+        footer{
+            background:#001433;
+            color:#d8def5;
+            padding:18px 20px;
+            font-size:12px;
+            text-align:center;
+        }
+        @media(max-width:768px){
+            header{flex-direction:column;align-items:flex-start;padding:14px 20px;}
+            nav{margin-top:8px;}
+            nav a{margin-left:14px;}
+        }
+    </style>
 </head>
-
 <body>
 
 <header>
+    <div class="logo">BR Jalan Securities</div>
     <nav>
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
@@ -45,14 +78,57 @@ header nav a{
     </nav>
 </header>
 
-<div class="container">
-    <h2>Investment Services</h2>
-    <ul>
-        <li>AI Stock Rotation Strategy</li>
-        <li>Block Trade Execution</li>
-        <li>Short Cycle Compounding</li>
-    </ul>
+<div class="wrapper">
+
+    <div class="box">
+        <h1>Investment Solutions</h1>
+        <p>
+            Our investment work is built around a simple idea:
+            combine data, discipline and risk management to create a more stable experience for investors.
+        </p>
+    </div>
+
+    <div class="box">
+        <span class="tag">EQUITY</span>
+        <h2>AI-Assisted Stock Rotation</h2>
+        <p>
+            A rules-based framework that helps identify sectors and stocks showing relative strength,
+            supported by human research review before execution.
+        </p>
+        <ul>
+            <li>Short-to-medium-term rotation between strong sectors.</li>
+            <li>Pre-defined stop-loss and profit booking zones.</li>
+            <li>Focus on liquidity and risk control.</li>
+        </ul>
+    </div>
+
+    <div class="box">
+        <span class="tag">OPPORTUNITIES</span>
+        <h2>Selected Block / Bulk Opportunities</h2>
+        <p>
+            For eligible investors, we may highlight certain opportunities where market depth and
+            pricing are favourable. Participation is always subject to risk understanding and suitability.
+        </p>
+        <ul>
+            <li>Transparent communication on opportunity, risk and expected holding horizon.</li>
+            <li>No guaranteed returns; full market-risk disclosure.</li>
+        </ul>
+    </div>
+
+    <div class="box">
+        <span class="tag">PLANNING</span>
+        <h2>Goal-Oriented Planning</h2>
+        <p>
+            Allocation suggestions are aligned with investor profile, investment horizon and risk appetite.
+            The objective is to build a path that can be followed with discipline through market cycles.
+        </p>
+    </div>
+
 </div>
+
+<footer>
+    Investment in securities market is subject to market risks. Please read all related documents carefully before investing.
+</footer>
 
 </body>
 </html>
