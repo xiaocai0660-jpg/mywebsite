@@ -3,114 +3,46 @@
   <head>
     <meta charset="UTF-8" />
     <title>Investor Portal | B R Jalan Securities</title>
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-    <div class="top-bar">
-      <div class="container top-bar-inner">
-        <span>Investor portal for existing clients</span>
-        <span>SEBI Reg No INZ000199136 | Phone +91 9601271770</span>
-      </div>
-    </div>
+  <body class="page">
+    <!-- top bar + header 把 Investor Portal 设为 active -->
 
-    <header class="site-header">
-      <div class="container nav-inner">
-        <a href="index.html" class="logo">
-          <span class="logo-mark">BR</span>
-          <span class="logo-text">
-            <strong>B R Jalan Securities</strong>
-            <small>Initiate · Invest · Prosper</small>
-          </span>
-        </a>
+    <main class="site-main">
+      <section class="section section-alt">
+        <div class="container">
+          <h1 class="section-title">Investor portal</h1>
+          <p class="section-lead">
+            Secure online access for trade reports, statements and plan-related
+            updates once your account is activated.
+          </p>
 
-        <nav class="main-nav">
-          <a href="index.html">Home</a>
-          <a href="plan.html">10th Plan</a>
-          <a href="investment.html">Investment Solutions</a>
-          <a href="about.html">About Us</a>
-          <a href="insights.html">Market Insights</a>
-          <a href="portal.html" class="active">Investor Portal</a>
-          <a href="contact.html">Get In Touch</a>
-        </nav>
-      </div>
-    </header>
+          <div class="two-col" style="margin-top: 30px">
+            <div>
+              <h3>What you can view</h3>
+              <ul class="list-dots">
+                <li>Daily contract notes and trade confirmations</li>
+                <li>Ledger and fund-movement statements</li>
+                <li>Holdings and positions across segments</li>
+                <li>Plan-wise performance summaries where applicable</li>
+              </ul>
+            </div>
 
-    <section class="section section-alt">
-      <div class="container">
-        <h1 class="section-title">Investor Portal</h1>
-        <p class="section-lead">
-          Secure access for existing clients to view statements track
-          allocations and download reports
-        </p>
-
-        <div class="portal-grid" style="margin-top: 28px">
-          <div class="portal-panel">
-            <h3>Portal features</h3>
-            <ul class="list-dots" style="margin-top: 10px">
-              <li>View ledger and holding statements</li>
-              <li>Download contract notes and tax reports</li>
-              <li>Track allocation status for block deals and IPOs</li>
-              <li>View communication history from our research desk</li>
-            </ul>
-            <p class="text-muted" style="margin-top: 16px">
-              Note Actual login is provided by our operations team Once
-              enabled you will receive a secure link and credentials
-            </p>
-          </div>
-
-          <div class="portal-panel">
-            <h3>Request portal access</h3>
-            <form>
-              <div class="form-field">
-                <label for="clientCode">Client code</label>
-                <input
-                  id="clientCode"
-                  type="text"
-                  placeholder="Enter your client code"
-                />
-              </div>
-              <div class="form-field">
-                <label for="email">Registered email</label>
-                <input
-                  id="email"
-                  type="email"
-                  placeholder="you@example.com"
-                />
-              </div>
-              <button type="submit" class="btn btn-primary">
-                Submit request
-              </button>
-            </form>
+            <div>
+              <h3>How to get access</h3>
+              <p class="text-muted" style="margin-top: 8px">
+                After onboarding and KYC completion, our operations team will
+                share your login credentials through registered email and SMS.
+                For any assistance in logging in or downloading reports, you can
+                always reach our desk via WhatsApp.
+              </p>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
-    <footer class="site-footer">
-      <div class="container">
-        <div class="footer-bottom">
-          <span>© 2025 B R Jalan Securities</span>
-          <span>SEBI Reg No INZ000199136</span>
-        </div>
-      </div>
-    </footer>
-
-    <a
-  href="https://wa.me/919601271770?text=Hello%20B%20R%20Jalan%20Securities%2C%20I%20would%20like%20to%20know%20more%20about%20the%2010th%20Plan"
-  class="wa-float"
-  target="_blank"
-  rel="noopener"
->
-  <svg viewBox="0 0 32 32" aria-hidden="true">
-    <path
-      d="M16 3C9.4 3 4 8.2 4 14.6c0 2.6.9 4.9 2.5 6.8L5 29l7-2.2c1.3.4 2.6.6 4 .6 6.6 0 12-5.2 12-11.6C28 8.2 22.6 3 16 3zm0 20.7c-1.2 0-2.3-.2-3.4-.6l-.2-.1-4.1 1.3 1.3-4-.1-.2c-1.2-1.4-1.9-3.1-1.9-4.9 0-4.4 3.7-8 8.3-8s8.3 3.6 8.3 8c0 4.4-3.7 8-8.3 8zm4.6-6.3c-.3-.2-1.7-.9-1.9-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.1-.2.2-.3.2-.7 0-.3-.2-1.3-.6-2.5-1.8-.9-.9-1.5-2-1.7-2.3-.2-.3 0-.5.2-.7.2-.2.3-.3.4-.5.2-.1.3-.3.4-.5.1-.2 0-.4 0-.6 0-.2-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.7 0 1.6 1.2 3.1 1.4 3.3.2.2 2.3 3.5 5.6 4.8.8.3 1.5.5 2 .6.8.3 1.5.2 2.1.1.6-.1 1.7-.7 1.9-1.3.2-.6.2-1.1.2-1.3-.1-.1-.3-.2-.6-.4z"
-    />
-  </svg>
-</a>
-
+    <!-- footer + WhatsApp 复制 -->
   </body>
 </html>
