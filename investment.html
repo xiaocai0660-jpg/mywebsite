@@ -3,28 +3,35 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport"content="width=device-width, initial-scale=1.0">
-<title>Investment Services</title>
-
-<style>
-body{margin:0;font-family:Arial;background:#eef4fb;}
-header{background:#002060;padding:22px 40px;}
-header nav a{color:#fff;margin-right:26px;text-decoration:none;font-weight:bold;}
-header nav a:hover{opacity:0.8;}
-.section{width:85%;margin:35px auto;}
-.box{background:white;padding:35px;border-radius:10px;margin-bottom:25px;box-shadow:0 3px 10px rgba(0,0,0,0.08);}
-
-.chartWrap{background:white;padding:15px;border-radius:10px;margin-top:20px;height:260px;}
-</style>
+<title>Investment Models</title>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
+<style>
+body{margin:0;background:#eef4fb;font-family:Arial;}
+header{background:#002060;padding:22px 40px;}
+header nav a{color:#fff;margin-right:26px;text-decoration:none;font-weight:bold;}
+
+.box{width:85%;margin:35px auto;background:white;padding:35px;border-radius:10px;box-shadow:0 3px 10px rgba(0,0,0,0.08);}
+.chartBox{padding:20px;border-radius:10px;background:white;height:240px;}
+footer{text-align:center;background:#001a33;color:#fff;padding:25px;margin-top:55px;}
+</style>
+
 <script>
 window.onload=function(){
-var ctx=document.getElementById('c1').getContext('2d');
+var ctx=document.getElementById("C1").getContext("2d");
 new Chart(ctx,{
-type:'line',
-data:{labels:["Mon","Tue","Wed","Thu","Fri"],
-datasets:[{data:[22,32,28,36,45],borderColor:"#002060",borderWidth:3,fill:false}]}
+type:"line",
+data:{
+labels:["Mon","Tue","Wed","Thu","Fri"],
+datasets:[{
+label:"Strategy Return %",
+data:[8,12,22,28,36],
+borderWidth:3,
+borderColor:"#002060",
+fill:false
+}]
+}
 });
 }
 </script>
@@ -42,25 +49,22 @@ datasets:[{data:[22,32,28,36,45],borderColor:"#002060",borderWidth:3,fill:false}
 </nav>
 </header>
 
-<div class="section">
 <div class="box">
-<h2>Investment Models</h2>
+<h2>Investment Execution Models</h2>
+
 <ul>
-<li>Short-Cycle execution</li>
-<li>Block-Deal premium window</li>
-<li>Rotation strategy</li>
+<li>Fast cycle execution</li>
+<li>Block-window entry targeting</li>
+<li>Sector rotation trigger models</li>
 </ul>
 
-<div class="chartWrap">
-<canvas id="c1"></canvas>
+<div class="chartBox">
+<canvas id="C1"></canvas>
 </div>
 
 </div>
-</div>
 
-<footer style="text-align:center;background:#001a33;color:#fff;padding:25px;margin-top:55px;">
-© BR Jalan Securities Pvt Ltd.
-</footer>
+<footer>© BR Jalan Securities Pvt Ltd</footer>
 
 </body>
 </html>
