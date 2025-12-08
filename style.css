@@ -1,180 +1,94 @@
-/* style.css - High Fidelity Finance Theme */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The 10th Collective Investment Plan | BR Jalan Securities</title>
+  <link rel="stylesheet" href="style.css" />
 
-/* 1. Global Reset & Fonts */
-* {
-    box-sizing: border-box;
-}
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Join BR Jalan's 10th Collective Investment Plan combining AI trading, Bulk Deal arbitrage, and IPO allocations for 3–5X returns in 4 months.">
+  <meta name="keywords" content="BR Jalan Securities, Collective Investment Plan, AI Stock Picks, IPO Allocation, Bulk Deal, SEBI, Nodal Account">
+  <meta name="author" content="BR Jalan Securities Pvt. Ltd.">
 
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
-}
+  <!-- Open Graph Meta (for WhatsApp/LinkedIn/Facebook preview) -->
+  <meta property="og:title" content="The 10th Collective Investment Plan | BR Jalan Securities">
+  <meta property="og:description" content="AI-powered trading + bulk deal arbitrage + private equity allocations — All in one plan with secure SEBI-regulated capital setup.">
+  <meta property="og:image" content="https://www.brjalan.com/assets/plan-banner.jpg"> <!-- Replace with your hosted image -->
+  <meta property="og:url" content="https://www.brjalan.com/plan.html">
+  <meta property="og:type" content="website">
+</head>
 
-a {
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
+<body>
 
-/* 2. Top Navigation Bar (Dark Blue & Gold) */
-header {
-    background-color: #002060; /* Brand Dark Blue */
-    color: white;
-    padding: 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
+  <header>
+    <nav>
+      <div><a href="index.html">Home</a></div>
+      <div><a href="investment.html">Investment Solutions</a></div>
+      <div><a href="plan.html"><strong>10th Plan</strong></a></div>
+      <div><a href="about.html">About Us</a></div>
+      <div><a href="contact.html">Contact</a></div>
+    </nav>
+  </header>
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 15px 20px;
-}
+  <main style="padding: 40px 20px; max-width: 960px; margin: auto; background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+    <h1>The 10th Collective Investment Plan</h1>
+    <p>This flagship investment strategy by BR Jalan Securities combines AI-driven stock selection, bulk deal arbitrage, and offline IPO allotments — offering 3–5X returns within 4 months for qualified investors.</p>
 
-.logo-text {
-    font-size: 24px;
-    font-weight: bold;
-    color: #c5a059; /* Brand Gold */
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
+    <h2>📌 Investment Tiers & Returns</h2>
+    <table border="1" cellpadding="10" cellspacing="0" style="width:100%; border-collapse: collapse; text-align: center;">
+      <tr style="background-color: #f0f0f0;">
+        <th>Minimum Investment</th>
+        <th>Strategy</th>
+        <th>Expected Return</th>
+      </tr>
+      <tr>
+        <td>10,000</td>
+        <td>AI Intraday Rotation</td>
+        <td>Target 35%+ per month</td>
+      </tr>
+      <tr>
+        <td>1,00,000</td>
+        <td>Bulk Deal Arbitrage</td>
+        <td>3–5X in 4 months</td>
+      </tr>
+      <tr>
+        <td>5,00,000</td>
+        <td>IPO Allocation + Private Equity</td>
+        <td>Shares + Bonus + Dividends</td>
+      </tr>
+    </table>
 
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-}
+    <h2>🔐 Capital Protection & Risk Control</h2>
+    <ul>
+      <li>SEBI-authorized and RBI-regulated Nodal Account structure</li>
+      <li>Client funds never held by company; fully segregated banking</li>
+      <li>Fast withdrawals: processed within 24 hours</li>
+    </ul>
 
-nav ul li {
-    margin-left: 20px;
-}
+    <h2>🎯 Ideal for Investors Who...</h2>
+    <ul>
+      <li>Have idle capital or long-term allocation goals</li>
+      <li>Are seeking compounding with short-term trading benefits</li>
+      <li>Prefer secure, regulated, diversified strategies</li>
+    </ul>
 
-nav a {
-    color: white;
-    font-size: 14px;
-    font-weight: 600;
-    padding: 8px 12px;
-    border-radius: 4px;
-}
+    <h2>📞 Contact Details</h2>
+    <p>
+      <strong>BR Jalan Securities Pvt. Ltd.</strong><br />
+      SEBI Registration No: INZ000199136<br />
+      Phone: <a href="tel:+91961271770">+91 961271770</a><br />
+      Address: 3rd Floor, Unique Tower, S.V Road, Goregaon West, Mumbai 400062<br />
+    </p>
 
-nav a:hover {
-    background-color: #c5a059; /* Gold hover */
-    color: #002060;
-}
+    <p>
+      <a href="https://wa.me/91961271770" target="_blank" style="background-color: #28a745; color: white; padding: 12px 20px; border-radius: 8px; text-decoration: none; display: inline-block;">📲 Chat with Advisor on WhatsApp</a>
+    </p>
+  </main>
 
-/* 3. Hero Section (Image Background) */
-#hero-section {
-    background-image: linear-gradient(rgba(0, 32, 96, 0.7), rgba(0, 32, 96, 0.5)), url('https://images.unsplash.com/photo-1611974765270-ca1258634369?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80'); /* Professional Finance Background */
-    background-size: cover;
-    background-position: center;
-    height: 500px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
-    padding: 20px;
-}
+  <footer style="text-align: center; padding: 20px; background-color: #002060; color: white;">
+    © 2025 BR Jalan Securities. All rights reserved.
+  </footer>
 
-#hero-section h1 {
-    font-size: 3.5rem;
-    margin-bottom: 10px;
-    color: #fff;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-}
-
-#hero-section h2 {
-    font-size: 1.5rem;
-    font-weight: 300;
-    color: #c5a059; /* Gold */
-    margin-top: 0;
-    margin-bottom: 30px;
-}
-
-#hero-section p {
-    max-width: 700px;
-    font-size: 1.1rem;
-    margin-bottom: 30px;
-}
-
-/* 4. Buttons */
-.cta-button {
-    background-color: #c5a059;
-    color: #002060;
-    padding: 12px 30px;
-    font-size: 16px;
-    font-weight: bold;
-    border-radius: 2px;
-    text-transform: uppercase;
-    border: 2px solid #c5a059;
-}
-
-.cta-button:hover {
-    background-color: transparent;
-    color: #fff;
-}
-
-.button-link {
-    color: #002060;
-    font-weight: bold;
-    border-bottom: 2px solid #c5a059;
-}
-
-/* 5. Main Content Container */
-.Container {
-    max-width: 1200px;
-    margin: 40px auto;
-    padding: 0 20px;
-}
-
-/* 6. Strategy Cards (Grid Layout) */
-.strategy-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    margin-top: 30px;
-}
-
-.strategy-card {
-    background: white;
-    padding: 30px;
-    border-top: 4px solid #c5a059; /* Gold top border */
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    transition: transform 0.3s;
-}
-
-.strategy-card:hover {
-    transform: translateY(-5px);
-}
-
-.strategy-card h3 {
-    color: #002060;
-    margin-top: 0;
-}
-
-/* 7. Footer */
-footer {
-    background-color: #333;
-    color: #ccc;
-    text-align: center;
-    padding: 20px;
-    margin-top: 50px;
-    font-size: 0.9rem;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    nav { flex-direction: column; }
-    nav ul { margin-top: 15px; }
-    #hero-section h1 { font-size: 2.5rem; }
-}
+</body>
+</html>
