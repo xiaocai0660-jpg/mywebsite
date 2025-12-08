@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
+
+    <!-- Website Icon -->
     <link rel="icon" type="image/png" href="02.png">
 
     <style>
@@ -14,7 +16,7 @@
         }
 
         header {
-            background: #051b43;
+            background: #001e5c;
             color: white;
         }
 
@@ -34,112 +36,125 @@
         nav {
             padding: 10px 20px;
             background: #001e5c;
-            position: sticky;
-            top: 0;
-            z-index: 999;
         }
 
         .container {
-            max-width: 1100px;
+            width: 80%;
             margin: auto;
-            background: white;
-            padding: 30px;
-            border-radius: 8px;
-            margin-top: 40px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            padding: 50px 0;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 15px;
         }
 
         label {
             display: block;
             font-size: 15px;
-            margin-bottom: 6px;
+            margin-bottom: 8px;
+            margin-top: 18px;
+            font-weight: bold;
         }
 
-        input, textarea {
+        input,
+        textarea {
             width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ddd;
-            border-radius: 6px;
+            padding: 12px;
+            border: 1px solid #ccc;
             font-size: 15px;
+            border-radius: 3px;
+        }
+
+        textarea {
+            height: 120px;
         }
 
         button {
             background: #001e5c;
-            border: none;
-            padding: 12px 22px;
-            cursor: pointer;
             color: white;
-            font-size: 16px;
-            border-radius: 6px;
+            padding: 12px 22px;
+            font-size: 15px;
+            border: none;
+            margin-top: 18px;
+            cursor: pointer;
+            border-radius: 4px;
         }
 
         button:hover {
-            background: #0348b5;
+            opacity: 0.85;
         }
 
-        .whatsapp {
-            margin-top: 20px;
+        .bottom-info {
+            margin-top: 30px;
             font-size: 15px;
         }
 
         footer {
+            width: 100%;
+            text-align: center;
+            padding: 15px 0;
             background: #001e5c;
-            padding: 15px;
-            margin-top: 50px;
+            color: white;
+            margin-top: 60px;
+            font-size: 14px;
         }
 
-        footer p {
-            color: white;
-            text-align: center;
-            font-size: 13px;
-            margin: 0;
+        .whatsapp-link {
+            margin-top: 10px;
+            display: inline-block;
+            color: #001e5c;
+            font-weight: bold;
+        }
+
+        .whatsapp-link:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 
 <body>
 
-<header>
-    <h1>Contact Us</h1>
-</header>
+    <header>
+        <h1>Contact Us</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="investment.html">Investment Plans</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
 
-<nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About Us</a>
-    <a href="investment.html">Investment Plans</a>
-    <a href="contact.html"><strong>Contact</strong></a>
-</nav>
+    <div class="container">
+        <h2>Get in Touch</h2>
 
+        <!-- FORM START -->
+        <form action="https://formsubmit.co/YOUR_EMAIL_HERE" method="POST">
 
-<div class="container">
-    <h2>Get in Touch</h2>
+            <input type="hidden" name="_captcha" value="false">
 
-    <label>Your Name</label>
-    <input type="text" placeholder="Enter your full name">
+            <label>Your Name</label>
+            <input type="text" name="name" placeholder="Enter your full name" required>
 
-    <label>Your Email</label>
-    <input type="email" placeholder="Enter your email address">
+            <label>Your Email</label>
+            <input type="email" name="email" placeholder="Enter your email address" required>
 
-    <label>Your Message</label>
-    <textarea placeholder="Write your message..." rows="5"></textarea>
+            <label>Your Message</label>
+            <textarea name="message" placeholder="Write your message..." required></textarea>
 
-    <button onclick="window.open('https://wa.me/919601271770?text=Hello%2C I want investment guidance', '_blank')">
-        Submit Message
-    </button>
+            <button type="submit">Submit Message</button>
+        </form>
+        <!-- FORM END -->
 
-    <div class="whatsapp">
-        <p>Or reach us directly on WhatsApp:</p>
-        <p>
-            👉 <a href="https://wa.me/919601271770" target="_blank">Chat on WhatsApp</a>
-        </p>
+        <div class="bottom-info">
+            Or reach us directly on WhatsApp:<br><br>
+            <a class="whatsapp-link" href="https://wa.me/919601271770" target="_blank">💬 Chat on WhatsApp</a>
+        </div>
     </div>
-</div>
 
-
-<footer>
-    <p>© 2025 BR Jalan Securities Private Limited — All Rights Reserved</p>
-</footer>
+    <footer>
+        © 2025 BR Jalan Securities Private Limited — All Rights Reserved
+    </footer>
 
 </body>
 </html>
