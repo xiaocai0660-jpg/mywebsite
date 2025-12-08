@@ -9,35 +9,36 @@
 body{margin:0;font-family:Arial;background:#eef4fb;}
 header{background:#002060;padding:22px 40px;}
 header nav a{color:#fff;margin-right:26px;text-decoration:none;font-weight:bold;}
-header nav a:hover{opacity:0.8;}
+header nav a:hover{opacity:0.7;}
 
 .slider{width:100%;height:420px;overflow:hidden;position:relative;}
 .slide{display:none;width:100%;height:100%;background-size:cover;background-position:center;}
 .active{display:block;}
 
 .section{width:85%;margin:35px auto;}
-.box{background:white;padding:35px;border-radius:10px;margin-bottom:25px;box-shadow:0 3px 10px rgba(0,0,0,0.08);}
+.box{background:white;padding:35px;border-radius:10px;margin-bottom:28px;box-shadow:0 3px 10px rgba(0,0,0,0.08);}
 
 footer{
 background:#001a33;
 color:#fff;
 padding:35px 50px;
-margin-top:45px;
 font-size:14px;
+margin-top:55px;
 }
 footer div{margin-bottom:12px;}
-footer a{color:#00d4ff;font-weight:bold;text-decoration:none;}
+footer a{color:#00d4ff;text-decoration:none;font-weight:bold;}
+
 </style>
 
 <script>
-let index=0;
-function rotate(){
+let i=0;
+function rotateBanner(){
 let slides=document.querySelectorAll('.slide');
 slides.forEach(x=>x.style.display='none');
-index=(index+1)%slides.length;
-slides[index].style.display='block';
+i=(i+1)%slides.length;
+slides[i].style.display='block';
 }
-setInterval(rotate,3500);
+setInterval(rotateBanner,3500);
 </script>
 
 </head>
@@ -55,35 +56,35 @@ setInterval(rotate,3500);
 
 <div class="slider">
 <div class="slide active" style="background-image:url('https://images.pexels.com/photos/669615/pexels-photo-669615.jpeg?auto=compress');"></div>
-<div class="slide" style="background-image:url('https://images.pexels.com/photos/6476588/pexels-photo-6476588.jpeg?auto=compress');"></div>
 <div class="slide" style="background-image:url('https://images.pexels.com/photos/6801643/pexels-photo-6801643.jpeg?auto=compress');"></div>
+<div class="slide" style="background-image:url('https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress');"></div>
 </div>
 
 <div class="section">
 <div class="box">
-<h2>Why Choose BR Jalan Securities?</h2>
+<h2>Why BR Jalan Securities?</h2>
 <ul>
-<li>AI-Driven Stock Selection & Rotation</li>
-<li>Block-Deals at Exclusive Entry Windows</li>
-<li>Short-Cycle Exit With Controlled Risk</li>
-<li>Research-Backed Execution Approach</li>
+<li>AI-based Stock Execution Models</li>
+<li>Premium Entry Block-Deal Window</li>
+<li>Low Risk & Short Execution Cycle</li>
+<li>Market-driven allocation logic</li>
 </ul>
 </div>
 
 <div class="box">
-<h2>Client Benefits</h2>
+<h2>Client Advantages</h2>
 <ul>
-<li>Fast Cycle Return</li>
-<li>No Forced Locking Period</li>
-<li>Direct Advisor Support</li>
-<li>High-Accuracy Entry Timing</li>
+<li>No long commitment cycles</li>
+<li>Fast recovery model</li>
+<li>Dedicated advisory team</li>
+<li>Multi-layer plan execution</li>
 </ul>
 </div>
 </div>
 
 <footer>
-<div><strong>BR Jalan Securities Pvt. Ltd.</strong></div>
-<div>Registered at 903 Marathon Icon Nexgen Campus Lower Parel West Mumbai</div>
+<div><strong>BR Jalan Securities Pvt Ltd</strong></div>
+<div>903 Marathon Icon Nexgen Campus Mumbai</div>
 <div>Email: brjalan728@email.com</div>
 <div>WhatsApp: <a href="https://wa.me/91222493458">Click To Chat</a></div>
 </footer>
