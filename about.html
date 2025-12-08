@@ -2,72 +2,83 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>About Us</title>
 
 <style>
-    body {
-        font-family: Arial;
-        margin: 0;
-        background-color: #eef2f7;
-    }
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #eef2f7;
+}
 
-    header {
-        background: #001e5c;
-        padding: 22px 70px;
-        color: white;
-        box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-    }
+header {
+    background: #001e5c;
+    padding: 20px 50px;
+}
 
-    header nav a {
-        margin-right: 30px;
-        text-decoration: none;
-        color: white;
-        font-size: 16px;
-    }
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin-right: 25px;
+    font-size: 15px;
+}
 
-    header nav a:hover {
-        opacity: 0.85;
-    }
+header nav a:hover {
+    opacity: 0.85;
+}
 
-    h1 {
-        font-size: 33px;
-        text-align: center;
-        margin: 40px 0;
-        color: #001e5c;
-        font-weight: bold;
-    }
+.page-title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    padding: 45px;
+    color: white;
+    background: linear-gradient(to right, #001e5c, #355bb3);
+}
 
-    .box {
-        width: 85%;
-        margin: 22px auto;
-        background: white;
+.content-box {
+    width: 90%;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    margin: 20px auto;
+    box-shadow: 0 2px 7px rgba(0,0,0,0.12);
+}
+
+.section-title {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+ul {
+    margin-top: 5px;
+    line-height: 24px;
+    font-size: 14px;
+}
+
+footer {
+    background: #001e5c;
+    text-align: center;
+    padding: 15px;
+    color: white;
+    margin-top: 50px;
+}
+
+@media(max-width:768px) {
+    .page-title {
+        font-size: 24px;
         padding: 30px;
-        border-radius: 12px;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-        font-size: 16px;
-        line-height: 1.7;
     }
-
-    .box h2 {
-        margin-bottom: 18px;
-        color: #002570;
+    .content-box {
+        width: 93%;
+        padding: 20px;
     }
-
-    ul li {
-        margin-bottom: 6px;
-    }
-
-    footer {
-        background: #001e5c;
-        padding: 22px;
-        text-align: center;
-        color: white;
-        margin-top: 40px;
-        font-size: 14px;
-    }
+}
 </style>
-</head>
 
+</head>
 <body>
 
 <header>
@@ -79,40 +90,35 @@
     </nav>
 </header>
 
-<h1>About BR Jalan Securities</h1>
+<div class="page-title">Investment Strategy Overview</div>
 
-<div class="box">
-    <h2>Company Profile</h2>
-    BR Jalan Securities is an established equity market house offering structured investment advisory
-    and allocation-based services. We focus on long-term financial growth supported by disciplined execution.
-</div>
-
-<div class="box">
-    <h2>Regulatory Credentials</h2>
+<div class="content-box">
+    <div class="section-title">Who We Are</div>
     <ul>
-        <li>SEBI Registered Market Participant</li>
-        <li>SEBI Registration No.: INZ000199136</li>
-        <li>CDSL Participant DP ID: 18900</li>
-        <li>Operational since 1987</li>
+        <li>SEBI Registered Analyst: Mr. Hemang Mehta</li>
+        <li>Registration No.: INZ000199136</li>
+        <li>CDSL DP ID: 18900</li>
+        <li>Established 1987</li>
     </ul>
 </div>
 
-<div class="box">
-    <h2>Leadership & Expertise</h2>
+<div class="content-box">
+    <div class="section-title">Investment Approach</div>
     <ul>
-        <li>Lead Analyst: Mr Hemang Mehta</li>
-        <li>20+ years market experience</li>
-        <li>Expertise: AI asset rotation, block deals, IPO allocations</li>
+        <li>Structured entry mechanisms</li>
+        <li>AI-driven market rotation logic</li>
+        <li>Bulk-deal institutional benefit access</li>
+        <li>Low volatility execution logic</li>
     </ul>
 </div>
 
-<div class="box">
-    <h2>Our Investment Strengths</h2>
+<div class="content-box">
+    <div class="section-title">Core Focus</div>
     <ul>
-        <li>AI-filtered execution signals</li>
-        <li>Institution-grade pricing access</li>
-        <li>Risk-shielded entry models</li>
-        <li>Personalized investment tracking</li>
+        <li>High-integrity allocation model</li>
+        <li>Performance continuity over short cycles</li>
+        <li>Risk-managed entry systems</li>
+        <li>Preference-based opportunity allocation</li>
     </ul>
 </div>
 
