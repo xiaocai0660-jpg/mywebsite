@@ -1,327 +1,543 @@
-/* ===== Market Insights page ===== */
+/* style.css  — B R Jalan Securities Official Theme */
 
-/* 小号横幅样式 */
-.hero-small {
-  position: relative;
-  height: 260px;
+/* --------- Reset --------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  line-height: 1.6;
+  color: #222;
+  background: #f4f5f7;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* --------- Layout --------- */
+
+.container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Top info bar */
+
+.top-bar {
+  background: #0b1b33;
+  color: #ffffff;
+  font-size: 12px;
+}
+
+.top-bar-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 0;
+}
+
+.top-bar-inner span + span {
+  opacity: 0.85;
+}
+
+/* Header + Navigation */
+
+.site-header {
+  background: #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-inner {
   display: flex;
   align-items: center;
-  color: #fff;
-  background: linear-gradient(135deg, #142544, #1f3660);
+  justify-content: space-between;
+  padding: 12px 0;
 }
 
-/* 使用和首页相同的背景图风格 你也可以换成别的图片 */
-.hero-insights {
-  background-image: url("02.png");
-  background-size: cover;
-  background-position: center;
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(6, 18, 48, 0.7);
+.logo-mark {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #c79b3b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 15px;
 }
 
-.hero-content {
-  position: relative;
-  max-width: 900px;
+.logo-text strong {
+  display: block;
+  font-size: 17px;
+  letter-spacing: 0.04em;
 }
 
-.hero-kicker {
+.logo-text small {
+  display: block;
+  font-size: 11px;
   text-transform: uppercase;
-  letter-spacing: 0.15em;
-  font-size: 12px;
-  margin-bottom: 8px;
-  color: #f3c979;
+  color: #777777;
 }
 
-.hero-small h1 {
-  font-size: 36px;
-  margin: 0 0 10px;
+.main-nav {
+  display: flex;
+  gap: 22px;
+  font-size: 14px;
+  text-transform: capitalize;
+}
+
+.main-nav a {
+  padding: 6px 0;
+  position: relative;
+  color: #0b1b33;
+  font-weight: 500;
+}
+
+.main-nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: #c79b3b;
+  transition: width 0.25s;
+}
+
+.main-nav a:hover::after,
+.main-nav a.active::after {
+  width: 100%;
+}
+
+@media (max-width: 900px) {
+  .header-inner {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .main-nav {
+    flex-wrap: wrap;
+    row-gap: 8px;
+  }
+}
+
+/* --------- Home Hero --------- */
+
+.hero {
+  position: relative;
+  min-height: 420px;
+  background: #162545 url("02.png") center / cover no-repeat;
   color: #ffffff;
 }
 
-.hero-subtitle {
-  max-width: 640px;
-  font-size: 15px;
-  color: #e1e7f5;
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(6, 14, 40, 0.9), rgba(6, 14, 40, 0.55));
 }
 
-/* 区块通用 */
+.hero-inner {
+  position: relative;
+  padding: 80px 0 90px;
+}
+
+.hero-kicker {
+  font-size: 13px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #f0c56a;
+  margin-bottom: 16px;
+}
+
+.hero h1 {
+  font-size: 40px;
+  max-width: 580px;
+  margin-bottom: 18px;
+}
+
+.hero-subtitle {
+  max-width: 560px;
+  opacity: 0.9;
+  margin-bottom: 26px;
+  font-size: 15px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 22px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background: #c79b3b;
+  color: #ffffff;
+  border-color: #c79b3b;
+}
+
+.btn-primary:hover {
+  background: #a97f2b;
+  border-color: #a97f2b;
+}
+
+.btn-outline {
+  background: transparent;
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+.btn-outline:hover {
+  background: #ffffff;
+  color: #0b1b33;
+}
+
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 28px;
+  }
+}
+
+/* --------- Generic Sections --------- */
+
 .section {
   padding: 60px 0;
 }
 
-.section-light {
-  padding: 60px 0;
-  background: #f5f7fb;
+.section-heading {
+  text-align: center;
+  margin-bottom: 35px;
 }
 
-/* 三列卡片 */
-.insights-grid {
+.section-heading h2 {
+  font-size: 26px;
+  margin-bottom: 8px;
+  color: #0b1b33;
+}
+
+.section-heading p {
+  color: #666666;
+  font-size: 14px;
+}
+
+/* Product cards */
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 22px;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  padding: 22px 20px;
+}
+
+.card h3 {
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+
+.card small {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #c79b3b;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 13px;
+  color: #555555;
+}
+
+/* Why choose us */
+
+.features-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 22px;
+  margin-top: 20px;
+}
+
+.feature {
+  text-align: center;
+  padding: 20px 16px;
+}
+
+.feature-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 2px solid #f0c56a;
+  margin: 0 auto 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+/* Testimonials */
+
+.testimonials {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.05);
+  padding: 30px 26px;
+}
+
+.testimonial-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 24px;
+  gap: 20px;
 }
 
-.insight-card {
-  background: #ffffff;
-  border-radius: 12px;
-  padding: 22px 20px;
-  box-shadow: 0 8px 18px rgba(15, 35, 80, 0.08);
-  border-top: 4px solid #c99a3b;
-}
-
-.insight-card h3 {
-  margin-top: 0;
-  margin-bottom: 6px;
-  font-size: 18px;
-  color: #1b2945;
-}
-
-.insight-label {
+.testimonial {
   font-size: 13px;
-  color: #7683a4;
-  margin-bottom: 12px;
+  color: #555555;
 }
 
-.insight-card ul {
-  margin: 0;
-  padding-left: 18px;
+.testimonial strong {
+  display: block;
+  margin-top: 10px;
+  color: #0b1b33;
+}
+
+/* Contact banner */
+
+.contact-banner {
+  background: #162545;
+  color: #ffffff;
+  border-radius: 12px;
+  padding: 26px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.contact-banner p {
+  max-width: 620px;
+}
+
+/* --------- Inner Page Banner --------- */
+
+.page-hero {
+  background: #162545;
+  color: #ffffff;
+  padding: 50px 0 40px;
+  margin-bottom: 40px;
+}
+
+.page-hero h1 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.page-hero p {
+  max-width: 620px;
   font-size: 14px;
-  color: #3c4560;
+  color: #e0e4ff;
 }
 
-/* 主内容 + 侧边栏布局 */
+/* Investment Solutions page */
+
+.offer-lead {
+  margin-bottom: 28px;
+  font-size: 14px;
+  color: #444444;
+}
+
+.solution-list h3 {
+  font-size: 16px;
+  margin-top: 24px;
+  margin-bottom: 4px;
+  color: #0b1b33;
+}
+
+.solution-list p {
+  font-size: 14px;
+  color: #555555;
+}
+
+/* Market Insights page */
+
 .insights-layout {
   display: grid;
-  grid-template-columns: minmax(0, 2.2fr) minmax(260px, 1fr);
-  gap: 30px;
+  grid-template-columns: minmax(0, 2.1fr) minmax(0, 1.2fr);
+  gap: 40px;
 }
 
-@media (max-width: 900px) {
-  .insights-layout {
-    grid-template-columns: 1fr;
-  }
-}
-
-.insights-main h2 {
-  font-size: 22px;
-  margin-top: 0;
-  margin-bottom: 18px;
-}
-
-.note-block {
-  margin-bottom: 22px;
-  padding-bottom: 16px;
-  border-bottom: 1px solid #dde3f1;
-}
-
-.note-block h3 {
-  font-size: 17px;
-  margin-bottom: 8px;
-  color: #1b2945;
-}
-
-.note-block p {
-  font-size: 14px;
-  color: #3a4360;
-}
-
-/* 右侧卡片 */
-.insights-aside {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-}
-
-.aside-card {
-  background: #ffffff;
-  border-radius: 12px;
-  padding: 18px 16px;
-  box-shadow: 0 6px 14px rgba(10, 24, 60, 0.08);
-  font-size: 14px;
-  color: #3a4360;
-}
-
-.aside-card h4 {
-  margin-top: 0;
-  margin-bottom: 10px;
-  font-size: 16px;
-  color: #1b2945;
-}
-
-.aside-card ul {
-  margin: 0;
-  padding-left: 18px;
-}
-
-.contact-highlight {
-  margin: 10px 0 12px;
-  font-weight: 600;
-  color: #1b2945;
-}
-
-.btn-full {
-  display: inline-block;
-  width: 100%;
-  text-align: center;
-}
-/* ===== Investment Solutions page ===== */
-
-.hero-investment {
-  background-image: url("02.png"); /* use same banner image */
-  background-size: cover;
-  background-position: center;
-}
-
-/* intro block */
-.solutions-intro {
-  max-width: 760px;
-}
-
-.solutions-intro h2 {
-  margin-top: 0;
-  margin-bottom: 10px;
-  font-size: 22px;
-}
-
-/* cards grid */
-.solutions-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 24px;
-}
-
-.solution-card {
-  background: #ffffff;
-  border-radius: 12px;
-  padding: 20px 18px;
-  box-shadow: 0 8px 18px rgba(15, 35, 80, 0.08);
-  border-top: 4px solid #c99a3b;
-  font-size: 14px;
-  color: #3a4360;
-}
-
-.solution-card h3 {
-  margin-top: 0;
+.insights-layout h3 {
+  margin-top: 22px;
   margin-bottom: 6px;
-  font-size: 18px;
-  color: #1b2945;
+  font-size: 16px;
 }
 
-.solution-tag {
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: #9a7c33;
-  margin-bottom: 10px;
-}
-
-/* choose section */
-.choose-layout {
-  display: grid;
-  grid-template-columns: minmax(0, 2fr) minmax(260px, 1.2fr);
-  gap: 28px;
-}
-
-@media (max-width: 900px) {
-  .choose-layout {
-    grid-template-columns: 1fr;
-  }
-}
-
-.choose-main ul {
+.insights-layout ul {
   padding-left: 18px;
-  margin: 10px 0 0;
   font-size: 14px;
-  color: #3a4360;
+  color: #555555;
 }
 
-.choose-aside {
+.insights-layout li {
+  margin-bottom: 4px;
+}
+
+.note-box {
   background: #ffffff;
-  border-radius: 12px;
-  padding: 20px 18px;
-  box-shadow: 0 8px 18px rgba(15, 35, 80, 0.06);
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+  padding: 18px 16px;
+  font-size: 13px;
+  color: #555555;
 }
 
-.choose-aside h3 {
-  margin-top: 0;
+/* Generic text layout */
+
+.page-main {
+  padding-bottom: 60px;
+}
+
+.page-main p {
+  font-size: 14px;
+  color: #555555;
   margin-bottom: 10px;
-  font-size: 17px;
-  color: #1b2945;
-}
-/* ===== Investor Portal page ===== */
-
-.hero-portal {
-  background-image: url("02.png"); /* 和首页同一张图 统一风格 */
-  background-size: cover;
-  background-position: center;
 }
 
-.portal-layout {
+/* About / Portal / Contact simple layout */
+
+.two-column {
   display: grid;
-  grid-template-columns: minmax(0, 1.7fr) minmax(280px, 1.3fr);
+  grid-template-columns: minmax(0, 1.6fr) minmax(0, 1.2fr);
   gap: 32px;
-  align-items: flex-start;
 }
 
 @media (max-width: 900px) {
-  .portal-layout {
+  .insights-layout,
+  .two-column {
     grid-template-columns: 1fr;
   }
 }
 
-.portal-copy h2 {
-  margin-top: 0;
-  margin-bottom: 10px;
-  font-size: 22px;
-}
+/* Contact form */
 
-.portal-copy ul {
-  padding-left: 18px;
-  margin: 10px 0 24px;
-  font-size: 14px;
-  color: #3a4360;
-}
-
-.portal-card {
+.contact-form {
   background: #ffffff;
-  border-radius: 12px;
-  padding: 22px 20px;
-  box-shadow: 0 10px 22px rgba(15, 35, 80, 0.1);
+  border-radius: 10px;
+  padding: 26px 22px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
 }
 
-.portal-card h3 {
-  margin-top: 0;
-  margin-bottom: 8px;
-  font-size: 18px;
-  color: #1b2945;
+.contact-form label {
+  display: block;
+  font-size: 13px;
+  margin-bottom: 4px;
+  color: #333333;
 }
 
-.portal-card form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-top: 10px;
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 4px;
+  border: 1px solid #d0d3e4;
+  font-size: 13px;
   margin-bottom: 12px;
 }
 
-.portal-card label {
+.contact-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* --------- Footer --------- */
+
+.site-footer {
+  background: #0b1b33;
+  color: #ffffff;
+  margin-top: 60px;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 32px 0;
+}
+
+.footer-inner h4 {
+  margin-bottom: 8px;
+}
+
+.footer-inner p {
   font-size: 13px;
-  font-weight: 600;
-  color: #3a4360;
+  opacity: 0.9;
 }
 
-.portal-card input {
-  padding: 8px 10px;
-  border-radius: 6px;
-  border: 1px solid #ccd3e5;
-  font-size: 14px;
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 13px;
 }
 
-.portal-note {
+.footer-links a {
+  color: #d0d5ff;
+}
+
+.footer-links a:hover {
+  color: #ffffff;
+}
+
+.footer-bottom {
+  text-align: center;
   font-size: 12px;
-  color: #6a7590;
+  padding: 10px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 700px) {
+  .footer-inner {
+    flex-direction: column;
+  }
 }
